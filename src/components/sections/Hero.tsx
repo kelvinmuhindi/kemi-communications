@@ -29,7 +29,7 @@ export function Hero() {
         <p className="mt-6 max-w-[560px] text-[17px] leading-relaxed text-[#C9C5C0]">
           Kemi Communications delivers reliable road transport and
           logistics for manufacturers, stockists, wholesalers and
-          retailers — from Nairobi to every corner of the region, and
+          retailers — from Nairobi to every corner of the region and
           across African borders.
         </p>
 

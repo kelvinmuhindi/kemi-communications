@@ -11,7 +11,7 @@ export const siteConfig = {
   email: "limitedkemi@gmail.com",
   address: "Utawala, Astro Karagita Close, No. 6, Nairobi, Kenya",
   hours: [
-    { label: "Mon – Fri", value: "Standard business hours" },
+    { label: "Mon – Fri", value: "8am to 5pm" },
     { label: "Saturday", value: "Until 12 noon" },
     { label: "Sunday", value: "By appointment" },
   ],
@@ -184,7 +184,7 @@ export const mediaItems = [
     title: "Kemi Communications website goes live",
     date: "2026",
     excerpt:
-      "We're pleased to launch our new website, making it easier for clients to learn about our services, fleet and coverage, and request quotes online.",
+      "We're pleased to launch our new website, making it easier for clients to learn about our services, fleet and coverage and request quotes online.",
   },
 ];
 

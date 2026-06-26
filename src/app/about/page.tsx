@@ -18,7 +18,7 @@ export default function AboutPage() {
       <main>
         <PageHero
           eyebrow="About Kemi Communications"
-          title="Built on reliability, driven by trade"
+          title="Built on reliability and driven by trade"
           description={aboutContent.intro}
         />
 
