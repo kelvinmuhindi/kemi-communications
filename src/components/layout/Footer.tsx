@@ -2,10 +2,12 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/content";
 
 const footerLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Fleet", href: "#fleet" },
-  { label: "Blog", href: "#blog" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Media", href: "/media" },
+  { label: "Resources", href: "/resources" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Get a Quote", href: "/get-a-quote" },
 ];
 
 export function Footer() {

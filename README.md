@@ -1,9 +1,13 @@
 # Kemi Communications — Website (Next.js)
 
-This is the homepage build for Kemi Communications Ltd, a road freight and
-logistics company operating in Kenya with cross-border ambitions across
-Africa. Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**,
-and **Tailwind CSS v4**.
+This is the multi-page website for Kemi Communications Ltd, a road freight
+and logistics company operating in Kenya with cross-border ambitions
+across Africa. Built with **Next.js 16 (App Router)**, **React 19**,
+**TypeScript**, and **Tailwind CSS v4**.
+
+Site structure modeled after Siginon Group's navigation pattern: Home,
+About Us, Services, Media, Resources, Contact Us, and a dedicated Get a
+Quote page.
 
 ## Getting started
 
@@ -14,38 +18,63 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Site map
+
+| Route | Page | Notes |
+|---|---|---|
+| `/` | Home | Hero, sneak-peek strip, services/fleet teaser, coverage, testimonial, CTA |
+| `/about` | About Us | Story, mission/vision, values, "why choose us" |
+| `/services` | Services | Full service list, fleet, coverage routes |
+| `/media` | Media | News/announcements + blog placeholder |
+| `/resources` | Resources | Brochure/FAQ/rate guide placeholders |
+| `/contact` | Contact Us | Contact details + general enquiry form |
+| `/get-a-quote` | Get a Quote | Dedicated freight quote request form |
+
+The top navigation (`src/components/layout/Header.tsx`) includes dropdown
+submenus for About Us, Services, and Media — edit the menu structure in
+`src/lib/content.ts` under `navLinks`.
+
 ## Project structure
 
 ```
 src/
   app/
-    layout.tsx        Root layout, metadata, html/body shell
-    page.tsx           Homepage — assembles all sections
-    globals.css         Tailwind import + brand color tokens (@theme)
+    layout.tsx              Root layout, metadata, html/body shell
+    page.tsx                  Homepage
+    globals.css                Tailwind import + brand color tokens (@theme)
+    about/page.tsx
+    services/page.tsx
+    media/page.tsx
+    resources/page.tsx
+    contact/page.tsx
+    get-a-quote/page.tsx
   components/
     layout/
-      Header.tsx       Sticky nav with mobile menu
-      Footer.tsx       Site footer
+      Header.tsx             Sticky nav with dropdowns + mobile menu
+      Footer.tsx               Site footer
     sections/
-      Hero.tsx
-      TruckIllustration.tsx   Inline SVG illustration (no stock imagery)
-      SneakPeek.tsx     Homepage "glimpse of the whole site" strip
-      Services.tsx
+      PageHero.tsx            Shared dark banner used at the top of every sub-page
+      Hero.tsx                  Homepage-only hero
+      TruckIllustration.tsx     Inline SVG illustration (no stock imagery)
+      SneakPeek.tsx             Homepage "glimpse of the whole site" strip
+      Services.tsx              Used on both Home (teaser) and /services (full, with anchors)
       Fleet.tsx
       Coverage.tsx
       Testimonial.tsx
-      CtaBand.tsx
+      CtaBand.tsx               Reusable CTA band, used at the bottom of most pages
     ui/
-      Button.tsx       Shared button variants (primary/ghost/dark/outline-light)
-      Eyebrow.tsx       Small section label with dash
+      Button.tsx               Shared button variants (primary/ghost/dark/outline-light)
+      Eyebrow.tsx               Small section label with dash
   lib/
-    content.ts          ALL site copy, services, fleet specs, contact info.
-                         Edit here first — most content changes never need
-                         to touch a component file.
+    content.ts                  ALL site copy, nav structure, services, fleet specs,
+                                 about/media/resources content, contact info, and
+                                 quote-form dropdown options. Edit here first — most
+                                 content changes never need to touch a component file.
 public/
   images/
-    logo.jpeg            Client-provided logo
+    logo.jpeg                    Client-provided logo
 ```
+
 
 ## Brand tokens
 
@@ -92,21 +121,26 @@ these CSS variables with system-font fallbacks.
 ## What's built vs. pending
 
 **Built (this draft):**
-- Homepage: hero, sneak-peek strip, services, fleet, coverage/routes,
-  testimonial, CTA band, footer
+- 7 pages: Home, About Us, Services, Media, Resources, Contact Us, Get a Quote
+- Dropdown navigation matching the requested site structure
+- Contact form and Get a Quote form (frontend only — see below)
 - Fully responsive (mobile menu, responsive grids)
 - All copy centralized in `lib/content.ts`
 
 **Pending client input (see questionnaire answers):**
 - Real photography (vehicles, team, office) — currently using illustrated
   SVG placeholders
-- Additional pages: About, full Services detail, Fleet detail, Blog, FAQ,
-  Contact/enquiry form
+- Blog content, press coverage, full FAQ list, brochure PDF, rate guide
 - M-Pesa payment integration (Daraja API)
 - Forex calculator widget
 - WhatsApp Business API (currently a basic `wa.me` deep link)
 - Google Analytics 4
-- Backend (Node.js) for enquiry form submission and storage
+
+**Pending developer work:**
+- Both forms (`/contact` and `/get-a-quote`) are frontend-only right now —
+  submitting them does nothing yet. A developer needs to wire them to an
+  email service (e.g. Resend, SendGrid) or a Node.js API route that stores
+  submissions and notifies the team.
 
 ## Useful commands
 

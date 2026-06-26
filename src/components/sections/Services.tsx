@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { services } from "@/lib/content";
 
-export function Services() {
+export function Services({ showAnchors = false }: { showAnchors?: boolean }) {
   return (
     <section id="services" className="px-6 py-[90px]">
       <div className="mx-auto max-w-[1240px]">
@@ -22,6 +22,7 @@ export function Services() {
           {services.map((service) => (
             <div
               key={service.number}
+              id={showAnchors ? service.id : undefined}
               className="group rounded-lg border border-brand-line p-8 transition-all duration-200 hover:border-brand-orange hover:shadow-xl"
             >
               <div className="mb-4.5 font-display text-[13px] tracking-wide text-brand-orange">
@@ -34,7 +35,7 @@ export function Services() {
                 {service.description}
               </p>
               <a
-                href="#contact"
+                href="/get-a-quote"
                 className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-ink"
               >
                 Request a quote

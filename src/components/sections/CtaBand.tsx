@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/content";
 
 export function CtaBand() {
   return (
-    <section id="contact" className="bg-brand-ink px-6 py-[90px] text-center text-white">
+    <section className="bg-brand-ink px-6 py-[90px] text-center text-white">
       <h2 className="font-display text-[28px] sm:text-[34px]">
         Ready to move your cargo?
       </h2>
@@ -12,8 +12,8 @@ export function CtaBand() {
         fast with a quote.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3.5">
-        <Button href={`mailto:${siteConfig.email}`} variant="primary">
-          Send an Enquiry
+        <Button href="/get-a-quote" variant="primary">
+          Get a Quote
         </Button>
         <Button
           href={`https://wa.me/${siteConfig.whatsapp}`}

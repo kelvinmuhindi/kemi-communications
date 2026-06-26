@@ -17,15 +17,44 @@ export const siteConfig = {
   ],
 };
 
-export const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Fleet", href: "#fleet" },
-  { label: "Coverage", href: "#coverage" },
-  { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+export type NavItem = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
+
+export const navLinks: NavItem[] = [
+  { label: "Home", href: "/" },
+  {
+    label: "About Us",
+    href: "/about",
+    children: [
+      { label: "Company Overview", href: "/about" },
+      { label: "Our Vision & Mission", href: "/about#vision" },
+      { label: "Why Choose Us", href: "/about#why-us" },
+    ],
+  },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "Road Freight Transport", href: "/services#road-freight" },
+      { label: "Cross-Border Logistics", href: "/services#cross-border" },
+      { label: "Corporate & Bulk Hire", href: "/services#corporate-hire" },
+    ],
+  },
+  {
+    label: "Media",
+    href: "/media",
+    children: [
+      { label: "News & Announcements", href: "/media#news" },
+      { label: "Blog", href: "/media#blog" },
+    ],
+  },
+  { label: "Resources", href: "/resources" },
+  { label: "Contact Us", href: "/contact" },
 ];
+
 
 export const heroStats = [
   { value: "1T–7T", label: "Fleet capacity range" },
@@ -38,48 +67,51 @@ export const sneakPeekItems = [
     icon: "truck",
     title: "Services",
     description: "Road freight, corporate hire & logistics solutions",
-    href: "#services",
+    href: "/services",
   },
   {
     icon: "truck-loading",
     title: "Our Fleet",
     description: "1-tonne to 7-tonne trucks for every cargo size",
-    href: "#fleet",
+    href: "/services#fleet",
   },
   {
     icon: "map",
-    title: "Coverage",
-    description: "Nairobi, Kisumu, Eldoret, Kisii & cross-border",
-    href: "#coverage",
+    title: "About Us",
+    description: "Our story, coverage area and why clients choose us",
+    href: "/about",
   },
   {
     icon: "star",
-    title: "Testimonials",
-    description: "What our clients say about working with us",
-    href: "#testimonials",
+    title: "Media",
+    description: "News, announcements and updates from Kemi Communications",
+    href: "/media",
   },
   {
     icon: "mail",
     title: "Get a Quote",
     description: "Tell us your route & cargo — we'll respond fast",
-    href: "#contact",
+    href: "/get-a-quote",
   },
 ];
 
 export const services = [
   {
+    id: "road-freight",
     number: "01",
     title: "Road Freight Transport",
     description:
       "Scheduled and on-demand haulage for manufacturers, wholesalers and retailers across Kenya and into neighbouring countries.",
   },
   {
+    id: "cross-border",
     number: "02",
     title: "Cross-Border Logistics",
     description:
       "Documentation-ready cross-border haulage connecting Kenya with regional markets, handled end to end.",
   },
   {
+    id: "corporate-hire",
     number: "03",
     title: "Corporate & Bulk Hire",
     description:
@@ -118,3 +150,90 @@ export const testimonial = {
     "Make it happen — that's exactly what Kemi Communications does, every single trip.",
   author: "Valued Client, Kenafric Industries",
 };
+
+// ── About page content ──────────────────────────────────────────────────
+export const aboutContent = {
+  intro:
+    "Kemi Communications Ltd is a road freight and logistics company based in Nairobi, Kenya, built to move cargo reliably for manufacturers, stockists, wholesalers and retailers.",
+  story:
+    "We started with a simple commitment: when we say a delivery will arrive on time, it arrives on time. That principle now drives every route we run, every truck we dispatch, and every client relationship we build — from single-truck local hauls to multi-stop regional distribution.",
+  mission:
+    "To move our clients' cargo safely, reliably and on schedule — every trip, every time.",
+  vision:
+    "To become a trusted name in road freight and cross-border logistics across East Africa.",
+  values: [
+    "Reliability — we do what we say we'll do",
+    "Safety — for cargo, drivers and the road",
+    "Professionalism — in every client interaction",
+    "Integrity — transparent pricing, honest timelines",
+  ],
+  whyUs: [
+    {
+      title: "On-Time Commitment",
+      description:
+        "Our name is built on it — dispatch schedules and delivery windows we hold ourselves to.",
+    },
+    {
+      title: "Right-Sized Fleet",
+      description:
+        "From 1-tonne pickups to 7-tonne trucks, we match the vehicle to the cargo, not the other way round.",
+    },
+    {
+      title: "Regional Reach",
+      description:
+        "Core routes across Kenya today, with cross-border lanes in active development.",
+    },
+    {
+      title: "Responsive Team",
+      description:
+        "Real people, fast replies — by phone, email or WhatsApp.",
+    },
+  ],
+};
+
+// ── Media page content ──────────────────────────────────────────────────
+export const mediaItems = [
+  {
+    category: "Announcement",
+    title: "Kemi Communications website goes live",
+    date: "2026",
+    excerpt:
+      "We're pleased to launch our new website, making it easier for clients to learn about our services, fleet and coverage, and request quotes online.",
+  },
+];
+
+// ── Resources page content ────────────────────────────────────────────────
+export const resourceItems = [
+  {
+    title: "Company Brochure",
+    description: "An overview of our services, fleet and coverage area.",
+    status: "coming-soon",
+  },
+  {
+    title: "Frequently Asked Questions",
+    description: "Common questions about booking, pricing and cargo handling.",
+    status: "coming-soon",
+  },
+  {
+    title: "Rate Guide",
+    description: "Indicative pricing for our core routes and vehicle types.",
+    status: "coming-soon",
+  },
+];
+
+// ── Get a Quote page content ───────────────────────────────────────────────
+export const cargoTypes = [
+  "General Cargo",
+  "Bulk Goods",
+  "Perishables",
+  "Construction Materials",
+  "Household Goods / Relocation",
+  "Other",
+];
+
+export const truckOptions = [
+  "1-Tonne Pickup",
+  "3 to 5-Tonne Truck",
+  "7-Tonne Truck",
+  "Not sure — please advise",
+];

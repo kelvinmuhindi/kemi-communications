@@ -21,10 +21,10 @@ export function Hero() {
             across African borders.
           </p>
           <div className="mt-8 flex flex-wrap gap-3.5">
-            <Button href="#contact" variant="primary">
+            <Button href="/get-a-quote" variant="primary">
               Request a Quote
             </Button>
-            <Button href="#services" variant="ghost">
+            <Button href="/services" variant="ghost">
               Explore Services
             </Button>
           </div>
