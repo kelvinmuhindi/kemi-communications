@@ -22,7 +22,7 @@ Open http://localhost:3000.
 
 | Route | Page | Notes |
 |---|---|---|
-| `/` | Home | Brief hero/intro + short teaser cards linking to every other page. No duplicated detail — each page's full content lives only on its own page. |
+| `/` | Home | Full-bleed dark hero with stat strip, "Why Choose Us" feature grid, services teaser (one-liners only), testimonial, CTA. Modeled on the homepage patterns of siginon.com and freightforwarders.co.ke. No duplicated detail — full content lives only on its own page. |
 | `/about` | About Us | Story, mission/vision, values, "why choose us" |
 | `/services` | Services | Full service list, fleet, coverage routes |
 | `/media` | Media | News/announcements + blog placeholder |
@@ -51,14 +51,14 @@ src/
     get-a-quote/page.tsx
   components/
     layout/
-      Header.tsx             Sticky nav with dropdowns + mobile menu
+      Header.tsx             Sticky nav with mobile menu
       Footer.tsx               Site footer
     sections/
       PageHero.tsx            Shared dark banner used at the top of every sub-page
-      Hero.tsx                  Homepage-only hero
-      TruckIllustration.tsx     Inline SVG illustration (no stock imagery)
-      SneakPeek.tsx             Homepage "glimpse of the whole site" strip
-      Services.tsx              Used on both Home (teaser) and /services (full, with anchors)
+      Hero.tsx                  Homepage-only full-bleed hero with stat strip
+      WhyChooseUs.tsx           Homepage feature grid (Siginon/FFK pattern)
+      ServicesTeaser.tsx        Homepage service one-liners, links out to /services
+      Services.tsx              Full service grid, used on /services only
       Fleet.tsx
       Coverage.tsx
       Testimonial.tsx

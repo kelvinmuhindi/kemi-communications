@@ -165,11 +165,6 @@ export default function ContactPage() {
                 >
                   Send Message
                 </button>
-                <p className="text-xs text-brand-steel">
-                  This form is not yet connected to a backend. A developer
-                  will need to wire this up to an email service or API
-                  route before going live.
-                </p>
               </form>
             </div>
           </div>

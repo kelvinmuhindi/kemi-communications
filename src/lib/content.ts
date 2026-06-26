@@ -31,42 +31,53 @@ export const navLinks: NavItem[] = [
 ];
 
 
+// ── Homepage — hero stat strip (Siginon/FFK pattern) ──────────────────────
 export const heroStats = [
-  { value: "1T–7T", label: "Fleet capacity range" },
-  { value: "4+", label: "Regional routes served" },
-  { value: "2025", label: "Built on reliability" },
+  { value: "2025", label: "Founded" },
+  { value: "1T–7T", label: "Fleet Capacity Range" },
+  { value: "5+", label: "Towns & Cities Served" },
+  { value: "100%", label: "On-Time Commitment" },
 ];
 
-export const sneakPeekItems = [
+// ── Homepage — "Why Choose Us" feature grid ───────────────────────────────
+export const homeFeatures = [
   {
-    icon: "map",
-    title: "About Us",
-    description: "Our story, mission and why clients trust us",
-    href: "/about",
+    title: "On-Time Delivery",
+    description:
+      "Our name is built on it — dispatch schedules and delivery windows we hold ourselves to.",
   },
   {
-    icon: "truck",
-    title: "Services",
-    description: "Road freight, cross-border logistics & bulk hire",
+    title: "Right-Sized Fleet",
+    description:
+      "From 1-tonne pickups to 7-tonne trucks, matched to your cargo, not the other way round.",
+  },
+  {
+    title: "Regional Reach",
+    description:
+      "Core routes across Kenya today, with cross-border lanes in active development.",
+  },
+  {
+    title: "Responsive Team",
+    description: "Real people, fast replies — by phone, email or WhatsApp.",
+  },
+];
+
+// ── Homepage — service teaser cards (one line + link out, no detail) ─────
+export const homeServiceTeasers = [
+  {
+    title: "Road Freight Transport",
+    description: "Scheduled and on-demand haulage across Kenya.",
     href: "/services",
   },
   {
-    icon: "star",
-    title: "Media",
-    description: "News and updates from Kemi Communications",
-    href: "/media",
+    title: "Cross-Border Logistics",
+    description: "Documentation-ready haulage into regional markets.",
+    href: "/services",
   },
   {
-    icon: "truck-loading",
-    title: "Resources",
-    description: "Brochures, FAQs and rate guides",
-    href: "/resources",
-  },
-  {
-    icon: "mail",
-    title: "Get a Quote",
-    description: "Tell us your route & cargo — we'll respond fast",
-    href: "/get-a-quote",
+    title: "Corporate & Bulk Hire",
+    description: "Dedicated trucks for recurring or high-volume needs.",
+    href: "/services",
   },
 ];
 
