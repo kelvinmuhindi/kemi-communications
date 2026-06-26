@@ -11,7 +11,7 @@ export function Testimonial() {
           {testimonial.quote}
         </p>
         <p className="mt-6.5 text-[13.5px] font-semibold text-brand-steel">
-          — {testimonial.author}
+          {testimonial.author}
         </p>
       </div>
     </section>

@@ -8,7 +8,7 @@ export function CtaBand() {
         Ready to move your cargo?
       </h2>
       <p className="mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#C9C5C0]">
-        Tell us your route, cargo type and timeline — our team responds
+        Tell us your route, cargo type and timeline. Our team responds
         fast with a quote.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3.5">

@@ -92,7 +92,7 @@ export function Footer() {
           © {new Date().getFullYear()} {siteConfig.legalName}. All rights
           reserved.
         </span>
-        <span>Reg. No. {siteConfig.regNumber} — Nairobi, Kenya</span>
+        <span>Reg. No. {siteConfig.regNumber}, Nairobi, Kenya</span>
       </div>
     </footer>
   );

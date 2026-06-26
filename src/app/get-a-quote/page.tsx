@@ -16,7 +16,7 @@ export default function GetAQuotePage() {
       <main>
         <PageHero
           eyebrow="Get a Quote"
-          title="Tell us your route — we'll handle the rest"
+          title="Tell us your route, we'll handle the rest"
           description="Fill in the details below and our team will respond with a quote, usually within one business day."
         />
 

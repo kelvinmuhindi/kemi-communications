@@ -9,7 +9,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 export const metadata = {
   title: "Services | Kemi Communications Ltd",
   description:
-    "Road freight transport, cross-border logistics and corporate bulk hire — explore Kemi Communications' freight and logistics services.",
+    "Road freight transport, cross-border logistics and corporate bulk hire. Explore Kemi Communications' freight and logistics services.",
 };
 
 export default function ServicesPage() {

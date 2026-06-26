@@ -26,7 +26,7 @@ export function Services({ showAnchors = false }: { showAnchors?: boolean }) {
               className="group rounded-lg border border-brand-line p-8 transition-all duration-200 hover:border-brand-orange hover:shadow-xl"
             >
               <div className="mb-4.5 font-display text-[13px] tracking-wide text-brand-orange">
-                SERVICE — {service.number}
+                SERVICE {service.number}
               </div>
               <h3 className="mb-2.5 text-[19px] font-semibold text-brand-ink">
                 {service.title}

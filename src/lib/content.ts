@@ -44,7 +44,7 @@ export const homeFeatures = [
   {
     title: "On-Time Delivery",
     description:
-      "Our name is built on it — dispatch schedules and delivery windows we hold ourselves to.",
+      "Our name is built on it. Dispatch schedules and delivery windows we hold ourselves to.",
   },
   {
     title: "Right-Sized Fleet",
@@ -58,7 +58,7 @@ export const homeFeatures = [
   },
   {
     title: "Responsive Team",
-    description: "Real people, fast replies — by phone, email or WhatsApp.",
+    description: "Real people, fast replies, by phone, email or WhatsApp.",
   },
 ];
 
@@ -133,7 +133,7 @@ export const coverageStats = [
 
 export const testimonial = {
   quote:
-    "Make it happen — that's exactly what Kemi Communications does, every single trip.",
+    "Make it happen. That's exactly what Kemi Communications does, every single trip.",
   author: "Valued Client, Kenafric Industries",
 };
 
@@ -142,22 +142,22 @@ export const aboutContent = {
   intro:
     "Kemi Communications Ltd is a road freight and logistics company based in Nairobi, Kenya, built to move cargo reliably for manufacturers, stockists, wholesalers and retailers.",
   story:
-    "We started with a simple commitment: when we say a delivery will arrive on time, it arrives on time. That principle now drives every route we run, every truck we dispatch, and every client relationship we build — from single-truck local hauls to multi-stop regional distribution.",
+    "We started with a simple commitment: when we say a delivery will arrive on time, it arrives on time. That principle now drives every route we run, every truck we dispatch, and every client relationship we build, from single-truck local hauls to multi-stop regional distribution.",
   mission:
-    "To move our clients' cargo safely, reliably and on schedule — every trip, every time.",
+    "To move our clients' cargo safely, reliably and on schedule, every trip, every time.",
   vision:
     "To become a trusted name in road freight and cross-border logistics across East Africa.",
   values: [
-    "Reliability — we do what we say we'll do",
-    "Safety — for cargo, drivers and the road",
-    "Professionalism — in every client interaction",
-    "Integrity — transparent pricing, honest timelines",
+    "Reliability: we do what we say we'll do",
+    "Safety: for cargo, drivers and the road",
+    "Professionalism: in every client interaction",
+    "Integrity: transparent pricing, honest timelines",
   ],
   whyUs: [
     {
       title: "On-Time Commitment",
       description:
-        "Our name is built on it — dispatch schedules and delivery windows we hold ourselves to.",
+        "Our name is built on it. Dispatch schedules and delivery windows we hold ourselves to.",
     },
     {
       title: "Right-Sized Fleet",
@@ -172,7 +172,7 @@ export const aboutContent = {
     {
       title: "Responsive Team",
       description:
-        "Real people, fast replies — by phone, email or WhatsApp.",
+        "Real people, fast replies, by phone, email or WhatsApp.",
     },
   ],
 };
@@ -221,5 +221,5 @@ export const truckOptions = [
   "1-Tonne Pickup",
   "3 to 5-Tonne Truck",
   "7-Tonne Truck",
-  "Not sure — please advise",
+  "Not sure, please advise",
 ];

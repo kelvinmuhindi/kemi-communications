@@ -17,7 +17,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-[1240px] px-6 pb-24 pt-28 sm:pt-32">
         <div className="mb-4 inline-flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-[2px] text-brand-orange">
           <span className="h-0.5 w-6 bg-brand-orange" />
-          Road Freight &amp; Logistics — Kenya &amp; Cross-Border Africa
+          Road Freight &amp; Logistics in Kenya &amp; Cross-Border Africa
         </div>
 
         <h1 className="max-w-[820px] font-display text-[40px] leading-[1.08] text-white sm:text-[62px]">
@@ -29,7 +29,7 @@ export function Hero() {
         <p className="mt-6 max-w-[560px] text-[17px] leading-relaxed text-[#C9C5C0]">
           Kemi Communications delivers reliable road transport and
           logistics for manufacturers, stockists, wholesalers and
-          retailers — from Nairobi to every corner of the region and
+          retailers, from Nairobi to every corner of the region and
           across African borders.
         </p>
 

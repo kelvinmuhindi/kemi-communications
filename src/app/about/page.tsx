@@ -8,7 +8,7 @@ import { aboutContent } from "@/lib/content";
 export const metadata = {
   title: "About Us | Kemi Communications Ltd",
   description:
-    "Learn about Kemi Communications Ltd — our story, mission, vision and why clients trust us for road freight and logistics across Kenya.",
+    "Learn about Kemi Communications Ltd, including our story, mission, vision and why clients trust us for road freight and logistics across Kenya.",
 };
 
 export default function AboutPage() {

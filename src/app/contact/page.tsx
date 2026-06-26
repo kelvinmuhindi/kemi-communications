@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/content";
 export const metadata = {
   title: "Contact Us | Kemi Communications Ltd",
   description:
-    "Get in touch with Kemi Communications Ltd — phone, email, WhatsApp and office address.",
+    "Get in touch with Kemi Communications Ltd via phone, email, WhatsApp and office address.",
 };
 
 export default function ContactPage() {
