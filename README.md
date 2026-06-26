@@ -161,3 +161,13 @@ automatically on Vercel deployments — no extra setup needed. Locally or on
 other hosts it simply does nothing.
 
 Google Analytics 4 is not yet added — see "Pending client input" above.
+
+## Favicon & app icons
+
+`src/app/favicon.ico`, `src/app/icon.png`, and `src/app/apple-icon.png`
+are cropped from the client's logo (just the truck graphic, since the
+full logo with wordmark is illegible at favicon sizes). Next.js App
+Router auto-detects these filenames — no manual `<link>` tags or metadata
+config needed. To change them, just replace the files with new images of
+the same name (any reasonable square image works; Next.js handles
+resizing for different contexts).
