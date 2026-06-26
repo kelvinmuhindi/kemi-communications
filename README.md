@@ -22,7 +22,7 @@ Open http://localhost:3000.
 
 | Route | Page | Notes |
 |---|---|---|
-| `/` | Home | Hero, sneak-peek strip, services/fleet teaser, coverage, testimonial, CTA |
+| `/` | Home | Brief hero/intro + short teaser cards linking to every other page. No duplicated detail — each page's full content lives only on its own page. |
 | `/about` | About Us | Story, mission/vision, values, "why choose us" |
 | `/services` | Services | Full service list, fleet, coverage routes |
 | `/media` | Media | News/announcements + blog placeholder |
@@ -30,9 +30,10 @@ Open http://localhost:3000.
 | `/contact` | Contact Us | Contact details + general enquiry form |
 | `/get-a-quote` | Get a Quote | Dedicated freight quote request form |
 
-The top navigation (`src/components/layout/Header.tsx`) includes dropdown
-submenus for About Us, Services, and Media — edit the menu structure in
-`src/lib/content.ts` under `navLinks`.
+The top navigation (`src/components/layout/Header.tsx`) is a flat list —
+no "Home" link, no dropdowns. Every item is a real page navigation (an
+actual route change, not an anchor scroll on a single page). Edit the menu
+in `src/lib/content.ts` under `navLinks`.
 
 ## Project structure
 

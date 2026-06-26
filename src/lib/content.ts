@@ -20,37 +20,12 @@ export const siteConfig = {
 export type NavItem = {
   label: string;
   href: string;
-  children?: { label: string; href: string }[];
 };
 
 export const navLinks: NavItem[] = [
-  { label: "Home", href: "/" },
-  {
-    label: "About Us",
-    href: "/about",
-    children: [
-      { label: "Company Overview", href: "/about" },
-      { label: "Our Vision & Mission", href: "/about#vision" },
-      { label: "Why Choose Us", href: "/about#why-us" },
-    ],
-  },
-  {
-    label: "Services",
-    href: "/services",
-    children: [
-      { label: "Road Freight Transport", href: "/services#road-freight" },
-      { label: "Cross-Border Logistics", href: "/services#cross-border" },
-      { label: "Corporate & Bulk Hire", href: "/services#corporate-hire" },
-    ],
-  },
-  {
-    label: "Media",
-    href: "/media",
-    children: [
-      { label: "News & Announcements", href: "/media#news" },
-      { label: "Blog", href: "/media#blog" },
-    ],
-  },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Media", href: "/media" },
   { label: "Resources", href: "/resources" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -64,28 +39,28 @@ export const heroStats = [
 
 export const sneakPeekItems = [
   {
-    icon: "truck",
-    title: "Services",
-    description: "Road freight, corporate hire & logistics solutions",
-    href: "/services",
-  },
-  {
-    icon: "truck-loading",
-    title: "Our Fleet",
-    description: "1-tonne to 7-tonne trucks for every cargo size",
-    href: "/services#fleet",
-  },
-  {
     icon: "map",
     title: "About Us",
-    description: "Our story, coverage area and why clients choose us",
+    description: "Our story, mission and why clients trust us",
     href: "/about",
+  },
+  {
+    icon: "truck",
+    title: "Services",
+    description: "Road freight, cross-border logistics & bulk hire",
+    href: "/services",
   },
   {
     icon: "star",
     title: "Media",
-    description: "News, announcements and updates from Kemi Communications",
+    description: "News and updates from Kemi Communications",
     href: "/media",
+  },
+  {
+    icon: "truck-loading",
+    title: "Resources",
+    description: "Brochures, FAQs and rate guides",
+    href: "/resources",
   },
   {
     icon: "mail",
