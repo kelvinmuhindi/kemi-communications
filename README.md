@@ -155,10 +155,14 @@ npx tsc --noEmit # type-check only
 
 ## Analytics
 
-[Vercel Speed Insights](https://vercel.com/docs/speed-insights) is wired up
-in `src/app/layout.tsx` (`@vercel/speed-insights/next`). It activates
-automatically on Vercel deployments — no extra setup needed. Locally or on
-other hosts it simply does nothing.
+[Vercel Speed Insights](https://vercel.com/docs/speed-insights) and
+[Vercel Analytics](https://vercel.com/docs/analytics) are both wired up in
+`src/app/layout.tsx` (`@vercel/speed-insights/next` and
+`@vercel/analytics/next`). Both activate automatically on Vercel
+deployments — no extra setup needed. Locally or on other hosts they
+simply do nothing. Speed Insights tracks page performance; Analytics
+tracks visitor/pageview data, viewable under the Analytics tab in your
+Vercel project dashboard.
 
 Google Analytics 4 is not yet added — see "Pending client input" above.
 
