@@ -29,12 +29,12 @@ export function Fleet() {
   return (
     <section id="fleet" className="bg-brand-paper-warm px-6 py-[90px]">
       <div className="mx-auto max-w-[1240px]">
-        <div className="mb-12 max-w-[620px]">
+        <div className="mb-12 max-w-[620px] lg:max-w-[700px]">
           <Eyebrow>Our fleet</Eyebrow>
-          <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl">
+          <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl lg:text-[42px]">
             The right truck for every cargo, every time
           </h2>
-          <p className="mt-3.5 text-[15.5px] leading-relaxed text-brand-steel">
+          <p className="mt-3.5 text-[15.5px] leading-relaxed text-brand-steel lg:text-[17px]">
             From 1-tonne pickups to 7-tonne trucks, our fleet is maintained
             to NTSA standards and ready for dispatch.
           </p>
@@ -50,10 +50,10 @@ export function Fleet() {
                 {fleetVisuals[i]}
               </div>
               <div className="p-5.5">
-                <h3 className="mb-1.5 text-base font-semibold text-brand-ink">
+                <h3 className="mb-1.5 text-base font-semibold text-brand-ink lg:text-lg">
                   {vehicle.name}
                 </h3>
-                <p className="text-[13px] text-brand-steel">
+                <p className="text-[13px] text-brand-steel lg:text-[14.5px]">
                   {vehicle.description}
                 </p>
                 <span className="mt-3 inline-block rounded-full border border-brand-line bg-brand-paper-warm px-2.5 py-1 text-[11.5px] font-bold text-brand-ink-soft">

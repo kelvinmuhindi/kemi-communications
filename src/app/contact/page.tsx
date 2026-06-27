@@ -5,9 +5,9 @@ import { PageHero } from "@/components/sections/PageHero";
 import { siteConfig } from "@/lib/content";
 
 export const metadata = {
-  title: "Contact Us | Kemi Communications Ltd",
+  title: "Contact Us | Kemi Communication Ltd",
   description:
-    "Get in touch with Kemi Communications Ltd via phone, email, WhatsApp and office address.",
+    "Get in touch with Kemi Communication Ltd via phone, email, WhatsApp and office address.",
 };
 
 export default function ContactPage() {
@@ -24,7 +24,7 @@ export default function ContactPage() {
         <section className="px-6 py-[90px]">
           <div className="mx-auto grid max-w-[1240px] gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-6 font-display text-2xl text-brand-ink">
+              <h2 className="mb-6 font-display text-2xl text-brand-ink lg:text-[28px]">
                 Get in touch
               </h2>
 
@@ -107,7 +107,7 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-lg border border-brand-line bg-brand-paper-warm p-8">
-              <h2 className="mb-6 font-display text-2xl text-brand-ink">
+              <h2 className="mb-6 font-display text-2xl text-brand-ink lg:text-[28px]">
                 Send us a message
               </h2>
               <form className="flex flex-col gap-4">

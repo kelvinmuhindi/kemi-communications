@@ -7,9 +7,9 @@ import { Coverage } from "@/components/sections/Coverage";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata = {
-  title: "Services | Kemi Communications Ltd",
+  title: "Services | Kemi Communication Ltd",
   description:
-    "Road freight transport, cross-border logistics and corporate bulk hire. Explore Kemi Communications' freight and logistics services.",
+    "Road freight transport, cross-border logistics and corporate bulk hire. Explore Kemi Communication's freight and logistics services.",
 };
 
 export default function ServicesPage() {

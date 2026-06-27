@@ -4,9 +4,9 @@ import { PageHero } from "@/components/sections/PageHero";
 import { cargoTypes, truckOptions, siteConfig } from "@/lib/content";
 
 export const metadata = {
-  title: "Get a Quote | Kemi Communications Ltd",
+  title: "Get a Quote | Kemi Communication Ltd",
   description:
-    "Request a freight quote from Kemi Communications Ltd. Tell us your route, cargo type and timeline.",
+    "Request a freight quote from Kemi Communication Ltd. Tell us your route, cargo type and timeline.",
 };
 
 export default function GetAQuotePage() {

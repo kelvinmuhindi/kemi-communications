@@ -6,9 +6,9 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { resourceItems } from "@/lib/content";
 
 export const metadata = {
-  title: "Resources | Kemi Communications Ltd",
+  title: "Resources | Kemi Communication Ltd",
   description:
-    "Company brochures, FAQs and rate guides from Kemi Communications Ltd.",
+    "Company brochures, FAQs and rate guides from Kemi Communication Ltd.",
 };
 
 export default function ResourcesPage() {
@@ -34,10 +34,10 @@ export default function ResourcesPage() {
                     size={26}
                     className="mb-4 text-brand-orange-deep"
                   />
-                  <h3 className="mb-2 text-[16px] font-semibold text-brand-ink">
+                  <h3 className="mb-2 text-[16px] font-semibold text-brand-ink lg:text-lg">
                     {item.title}
                   </h3>
-                  <p className="mb-4 text-sm leading-relaxed text-brand-steel">
+                  <p className="mb-4 text-sm leading-relaxed text-brand-steel lg:text-[15px]">
                     {item.description}
                   </p>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-paper-warm px-3 py-1 text-[11.5px] font-bold text-brand-ink-soft">

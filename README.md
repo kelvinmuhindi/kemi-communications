@@ -1,6 +1,6 @@
-# Kemi Communications — Website (Next.js)
+# Kemi Communication — Website (Next.js)
 
-This is the multi-page website for Kemi Communications Ltd, a road freight
+This is the multi-page website for Kemi Communication Ltd, a road freight
 and logistics company operating in Kenya with cross-border ambitions
 across Africa. Built with **Next.js 16 (App Router)**, **React 19**,
 **TypeScript**, and **Tailwind CSS v4**.

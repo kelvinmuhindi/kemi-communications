@@ -2,8 +2,8 @@
 // details here without touching component code.
 
 export const siteConfig = {
-  name: "Kemi Communications",
-  legalName: "Kemi Communications Ltd",
+  name: "Kemi Communication",
+  legalName: "Kemi Communication Ltd",
   tagline: "On Time",
   regNumber: "PVT-OD1KDL5V",
   phone: "+254 704 881 748",
@@ -133,14 +133,14 @@ export const coverageStats = [
 
 export const testimonial = {
   quote:
-    "Make it happen. That's exactly what Kemi Communications does, every single trip.",
+    "Make it happen. That's exactly what Kemi Communication does, every single trip.",
   author: "Valued Client, Kenafric Industries",
 };
 
 // ── About page content ──────────────────────────────────────────────────
 export const aboutContent = {
   intro:
-    "Kemi Communications Ltd is a road freight and logistics company based in Nairobi, Kenya, built to move cargo reliably for manufacturers, stockists, wholesalers and retailers.",
+    "Kemi Communication Ltd is a road freight and logistics company based in Nairobi, Kenya, built to move cargo reliably for manufacturers, stockists, wholesalers and retailers.",
   story:
     "We started with a simple commitment: when we say a delivery will arrive on time, it arrives on time. That principle now drives every route we run, every truck we dispatch and every client relationship we build, from single-truck local hauls to multi-stop regional distribution.",
   mission:
@@ -181,7 +181,7 @@ export const aboutContent = {
 export const mediaItems = [
   {
     category: "Announcement",
-    title: "Kemi Communications website goes live",
+    title: "Kemi Communication website goes live",
     date: "2026",
     excerpt:
       "We're pleased to launch our new website, making it easier for clients to learn about our services, fleet and coverage and request quotes online.",

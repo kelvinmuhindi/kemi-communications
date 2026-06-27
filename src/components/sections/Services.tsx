@@ -6,12 +6,12 @@ export function Services({ showAnchors = false }: { showAnchors?: boolean }) {
   return (
     <section id="services" className="px-6 py-[90px]">
       <div className="mx-auto max-w-[1240px]">
-        <div className="mb-12 max-w-[620px]">
+        <div className="mb-12 max-w-[620px] lg:max-w-[700px]">
           <Eyebrow>What we do</Eyebrow>
-          <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl">
+          <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl lg:text-[42px]">
             Freight &amp; logistics services built for African trade
           </h2>
-          <p className="mt-3.5 text-[15.5px] leading-relaxed text-brand-steel">
+          <p className="mt-3.5 text-[15.5px] leading-relaxed text-brand-steel lg:text-[17px]">
             Whether you&apos;re moving raw materials between factories or
             stock between warehouses, our services are designed around
             reliability, safety and speed.
@@ -28,15 +28,15 @@ export function Services({ showAnchors = false }: { showAnchors?: boolean }) {
               <div className="mb-4.5 font-display text-[13px] tracking-wide text-brand-orange">
                 SERVICE {service.number}
               </div>
-              <h3 className="mb-2.5 text-[19px] font-semibold text-brand-ink">
+              <h3 className="mb-2.5 text-[19px] font-semibold text-brand-ink lg:text-[21px]">
                 {service.title}
               </h3>
-              <p className="mb-4.5 text-sm leading-relaxed text-brand-steel">
+              <p className="mb-4.5 text-sm leading-relaxed text-brand-steel lg:text-[15px]">
                 {service.description}
               </p>
               <a
                 href="/get-a-quote"
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-ink"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-ink lg:text-base"
               >
                 Request a quote
                 <ArrowRight

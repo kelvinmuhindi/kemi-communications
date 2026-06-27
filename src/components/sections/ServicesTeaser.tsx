@@ -10,13 +10,13 @@ export function ServicesTeaser() {
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-[560px]">
             <Eyebrow>End-to-End Logistics</Eyebrow>
-            <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl">
+            <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl lg:text-[42px]">
               What we do
             </h2>
           </div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-bold text-brand-ink-soft hover:text-brand-orange-deep"
+            className="inline-flex items-center gap-2 text-sm font-bold text-brand-ink-soft hover:text-brand-orange-deep lg:text-base"
           >
             View all services
             <ArrowRight size={16} />
@@ -30,13 +30,13 @@ export function ServicesTeaser() {
               href={service.href}
               className="group bg-brand-paper p-8 transition-colors hover:bg-white"
             >
-              <h3 className="mb-2.5 text-[17px] font-semibold text-brand-ink">
+              <h3 className="mb-2.5 text-[17px] font-semibold text-brand-ink lg:text-[19px]">
                 {service.title}
               </h3>
-              <p className="mb-5 text-sm leading-relaxed text-brand-steel">
+              <p className="mb-5 text-sm leading-relaxed text-brand-steel lg:text-[15px]">
                 {service.description}
               </p>
-              <span className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-orange-deep">
+              <span className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-orange-deep lg:text-base">
                 Learn more
                 <ArrowRight
                   size={15}
