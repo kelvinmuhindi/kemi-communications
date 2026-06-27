@@ -37,7 +37,7 @@ export default function AboutPage() {
 
               <div id="vision" className="grid gap-6">
                 <div className="rounded-lg border border-brand-line p-7">
-                  <h3 className="mb-2 font-display text-lg text-brand-orange-deep">
+                  <h3 className="mb-2 font-display text-lg text-brand-orange-deep lg:text-xl">
                     Our Mission
                   </h3>
                   <p className="text-[15px] leading-relaxed text-brand-steel lg:text-[16px]">
@@ -45,7 +45,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="rounded-lg border border-brand-line p-7">
-                  <h3 className="mb-2 font-display text-lg text-brand-orange-deep">
+                  <h3 className="mb-2 font-display text-lg text-brand-orange-deep lg:text-xl">
                     Our Vision
                   </h3>
                   <p className="text-[15px] leading-relaxed text-brand-steel lg:text-[16px]">
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   key={item.title}
                   className="rounded-lg border border-brand-line p-6 transition-colors hover:border-brand-orange"
                 >
-                  <h3 className="mb-2 text-[15px] font-semibold text-brand-ink lg:text-base">
+                  <h3 className="mb-2 text-[15px] font-semibold text-brand-ink lg:text-lg">
                     {item.title}
                   </h3>
                   <p className="text-[13.5px] leading-relaxed text-brand-steel lg:text-[14.5px]">

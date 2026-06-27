@@ -28,7 +28,7 @@ export function Services({ showAnchors = false }: { showAnchors?: boolean }) {
               <div className="mb-4.5 font-display text-[13px] tracking-wide text-brand-orange">
                 SERVICE {service.number}
               </div>
-              <h3 className="mb-2.5 text-[19px] font-semibold text-brand-ink lg:text-[21px]">
+              <h3 className="mb-2.5 text-[19px] font-semibold text-brand-ink lg:text-[23px]">
                 {service.title}
               </h3>
               <p className="mb-4.5 text-sm leading-relaxed text-brand-steel lg:text-[15px]">

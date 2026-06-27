@@ -50,7 +50,7 @@ export function Fleet() {
                 {fleetVisuals[i]}
               </div>
               <div className="p-5.5">
-                <h3 className="mb-1.5 text-base font-semibold text-brand-ink lg:text-lg">
+                <h3 className="mb-1.5 text-base font-semibold text-brand-ink lg:text-xl">
                   {vehicle.name}
                 </h3>
                 <p className="text-[13px] text-brand-steel lg:text-[14.5px]">

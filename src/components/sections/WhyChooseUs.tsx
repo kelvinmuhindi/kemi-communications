@@ -32,7 +32,7 @@ export function WhyChooseUs() {
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-brand-paper-warm">
                   <Icon size={22} className="text-brand-orange-deep" />
                 </div>
-                <h3 className="mb-2 text-[15.5px] font-semibold text-brand-ink lg:text-[17px]">
+                <h3 className="mb-2 text-[15.5px] font-semibold text-brand-ink lg:text-[19px]">
                   {feature.title}
                 </h3>
                 <p className="text-[13.5px] leading-relaxed text-brand-steel lg:text-[15px]">

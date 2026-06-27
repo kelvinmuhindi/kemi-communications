@@ -30,7 +30,7 @@ export function ServicesTeaser() {
               href={service.href}
               className="group bg-brand-paper p-8 transition-colors hover:bg-white"
             >
-              <h3 className="mb-2.5 text-[17px] font-semibold text-brand-ink lg:text-[19px]">
+              <h3 className="mb-2.5 text-[17px] font-semibold text-brand-ink lg:text-[21px]">
                 {service.title}
               </h3>
               <p className="mb-5 text-sm leading-relaxed text-brand-steel lg:text-[15px]">

@@ -40,7 +40,7 @@ export default function MediaPage() {
                     <Newspaper size={14} />
                     {item.category}
                   </div>
-                  <h3 className="mb-2 text-[17px] font-semibold text-brand-ink lg:text-lg">
+                  <h3 className="mb-2 text-[17px] font-semibold text-brand-ink lg:text-xl">
                     {item.title}
                   </h3>
                   <p className="mb-3 text-sm leading-relaxed text-brand-steel lg:text-[15px]">

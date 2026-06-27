@@ -34,7 +34,7 @@ export default function ResourcesPage() {
                     size={26}
                     className="mb-4 text-brand-orange-deep"
                   />
-                  <h3 className="mb-2 text-[16px] font-semibold text-brand-ink lg:text-lg">
+                  <h3 className="mb-2 text-[16px] font-semibold text-brand-ink lg:text-xl">
                     {item.title}
                   </h3>
                   <p className="mb-4 text-sm leading-relaxed text-brand-steel lg:text-[15px]">
