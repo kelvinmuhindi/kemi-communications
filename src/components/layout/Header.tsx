@@ -38,7 +38,7 @@ export function Header() {
               <li key={link.href} className="relative">
                 <Link
                   href={link.href}
-                  className="group/link relative py-1.5 text-sm font-semibold uppercase tracking-wide text-brand-ink-soft transition-colors hover:text-brand-orange-deep"
+                  className="group/link relative py-1.5 text-sm font-semibold uppercase tracking-wide text-brand-ink-soft transition-colors hover:text-brand-orange-deep lg:text-base"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-brand-orange transition-all duration-200 group-hover/link:w-full" />
