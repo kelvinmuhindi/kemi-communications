@@ -23,8 +23,8 @@ export function Header() {
             priority
           />
           <div className="flex flex-col leading-tight">
-            <span className="font-display text-sm tracking-wide text-brand-ink">
-              KEMI COMMUNICATIONS
+            <span className="font-display text-sm uppercase tracking-wide text-brand-ink">
+              {siteConfig.name}
             </span>
             <span className="mt-0.5 text-[11px] font-bold uppercase tracking-[1.5px] text-brand-orange-deep">
               {siteConfig.tagline}
