@@ -42,7 +42,7 @@ export function KenyaMap({ cities }: { cities: string[] }) {
   return (
     <div className="mx-auto w-full max-w-[480px]">
       <svg
-        viewBox="-10 -8 118 118"
+        viewBox="-30 -8 138 118"
         className="w-full"
         role="img"
         aria-label="Map of Kenya showing routes from Nairobi to Mombasa, Nakuru, Eldoret, Kisumu and Kisii"

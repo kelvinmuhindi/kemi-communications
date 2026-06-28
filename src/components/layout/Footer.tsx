@@ -17,9 +17,9 @@ export function Footer() {
         <div>
           <div className="mb-4 flex items-center gap-3">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo.png"
               alt={`${siteConfig.name} logo`}
-              width={44}
+              width={63}
               height={44}
               className="h-11 w-auto rounded"
             />

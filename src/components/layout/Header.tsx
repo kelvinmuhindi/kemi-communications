@@ -15,9 +15,9 @@ export function Header() {
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-3.5">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt={`${siteConfig.name} logo`}
-            width={46}
+            width={66}
             height={46}
             className="h-[46px] w-auto"
             priority

@@ -89,7 +89,7 @@ src/
     validation.ts                Shared email and Kenyan phone number validation
 public/
   images/
-    logo.jpeg                    My logo
+    logo.png                      My logo, transparent background
 ```
 
 ## My brand colors
