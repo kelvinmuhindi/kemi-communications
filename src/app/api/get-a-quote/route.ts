@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sendEmailNotification } from "@/lib/email";
 import { sendWhatsAppNotification } from "@/lib/whatsapp";
+import { isValidEmail, isValidKenyanPhone, escapeHtml } from "@/lib/validation";
 
 const submissionLog = new Map<string, number[]>();
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
@@ -14,15 +15,6 @@ function isRateLimited(ip: string): boolean {
   timestamps.push(now);
   submissionLog.set(ip, timestamps);
   return timestamps.length > RATE_LIMIT_MAX;
-}
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
 }
 
 export async function POST(request: NextRequest) {
@@ -55,10 +47,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json(
         { error: "Please provide a valid email address." },
+        { status: 400 }
+      );
+    }
+
+    if (!isValidKenyanPhone(phone)) {
+      return NextResponse.json(
+        {
+          error:
+            "Please provide a valid phone number (10 digits, e.g. 0704881748, or with country code, e.g. +254704881748).",
+        },
         { status: 400 }
       );
     }

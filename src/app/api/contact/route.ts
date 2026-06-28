@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sendEmailNotification } from "@/lib/email";
 import { sendWhatsAppNotification } from "@/lib/whatsapp";
+import { isValidEmail, escapeHtml } from "@/lib/validation";
 
 // Basic in-memory rate limiting (per server instance). Not a substitute
 // for a real rate limiter, but stops naive repeated-submit abuse without
@@ -17,15 +18,6 @@ function isRateLimited(ip: string): boolean {
   timestamps.push(now);
   submissionLog.set(ip, timestamps);
   return timestamps.length > RATE_LIMIT_MAX;
-}
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
 }
 
 export async function POST(request: NextRequest) {
@@ -50,8 +42,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json(
         { error: "Please provide a valid email address." },
         { status: 400 }

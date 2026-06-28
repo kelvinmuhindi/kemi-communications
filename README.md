@@ -62,8 +62,8 @@ src/
       ServicesTeaser.tsx        Homepage service one-liners, links out to /services
       Services.tsx              Full service grid, used on /services only
       Fleet.tsx
-      Coverage.tsx              Includes the illustrated Kenya map (KenyaMap.tsx)
-      KenyaMap.tsx              Custom SVG map, Nairobi hub with routes to each city
+      Coverage.tsx              Just the stats and the Kenya map now, no duplicate text list
+      KenyaMap.tsx              Custom SVG map traced from real lat/lon, Nairobi hub with routes to each city
       Testimonial.tsx
       CtaBand.tsx               Reusable CTA band at the bottom of most pages
       ContactForm.tsx           Client component, handles /contact form state and submit
@@ -79,6 +79,7 @@ src/
                                  component file.
     email.ts                    Resend email-sending helper, used by both API routes
     whatsapp.ts                 WhatsApp Business Cloud API helper, used by both API routes
+    validation.ts                Shared email and Kenyan phone number validation
 public/
   images/
     logo.jpeg                    My logo

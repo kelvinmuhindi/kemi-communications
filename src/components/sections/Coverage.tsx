@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { KenyaMap } from "@/components/sections/KenyaMap";
 import { coverageRoute, coverageStats } from "@/lib/content";
@@ -18,37 +17,18 @@ export function Coverage() {
           </p>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-16">
-          <div>
-            <div className="flex flex-wrap items-center gap-y-2">
-              {coverageRoute.map((city, i) => (
-                <div key={city} className="flex items-center">
-                  <span className="font-display text-base uppercase tracking-wide py-2.5 lg:text-lg">
-                    {city}
-                  </span>
-                  {i < coverageRoute.length - 1 && (
-                    <ArrowRight
-                      size={18}
-                      className="mx-3 text-brand-orange sm:mx-4.5"
-                      aria-hidden="true"
-                    />
-                  )}
-                </div>
-              ))}
+        <div className="flex flex-wrap gap-12 border-b border-white/10 pb-10">
+          {coverageStats.map((stat) => (
+            <div key={stat.label}>
+              <p className="mb-1 font-display text-xl text-brand-orange lg:text-2xl">
+                {stat.value}
+              </p>
+              <p className="text-[12.5px] text-[#A9A5A0] lg:text-sm">{stat.label}</p>
             </div>
+          ))}
+        </div>
 
-            <div className="mt-10 flex flex-wrap gap-12 border-t border-white/10 pt-7">
-              {coverageStats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="mb-1 font-display text-xl text-brand-orange lg:text-2xl">
-                    {stat.value}
-                  </p>
-                  <p className="text-[12.5px] text-[#A9A5A0] lg:text-sm">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
+        <div className="pt-10">
           <KenyaMap cities={coverageRoute} />
         </div>
       </div>

@@ -128,8 +128,10 @@ export function QuoteForm() {
             type="tel"
             required
             disabled={fieldDisabled}
+            pattern="^(0\d{9}|\+?254\d{9})$"
+            title="Enter a 10-digit number (e.g. 0704881748) or with the country code (e.g. +254704881748)"
             className="w-full rounded-sm border border-brand-line bg-white px-4 py-2.5 text-sm text-brand-ink focus:border-brand-orange focus:outline-none disabled:opacity-60"
-            placeholder="+254 7XX XXX XXX"
+            placeholder="0704881748 or +254704881748"
           />
         </div>
         <div>
