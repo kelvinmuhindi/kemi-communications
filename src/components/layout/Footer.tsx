@@ -87,12 +87,11 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-[1240px] flex-col gap-2 pt-6 text-center text-[12px] sm:flex-row sm:flex-wrap sm:justify-between sm:text-left sm:text-[12.5px]">
+      <div className="mx-auto max-w-[1240px] pt-6 text-center text-[12px] sm:text-[12.5px]">
         <span>
           © {new Date().getFullYear()} {siteConfig.legalName}. All rights
           reserved.
         </span>
-        <span>Reg. No. {siteConfig.regNumber}, Nairobi, Kenya</span>
       </div>
     </footer>
   );

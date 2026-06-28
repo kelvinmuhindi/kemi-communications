@@ -23,6 +23,14 @@ const fleetVisuals = [
     <circle cx="28" cy="56" r="9" fill="#181614" />
     <circle cx="132" cy="56" r="9" fill="#181614" />
   </svg>,
+  // 10-tonne truck
+  <svg key="extra-heavy" width="180" height="70" viewBox="0 0 180 70" aria-hidden="true">
+    <rect x="4" y="8" width="118" height="44" rx="3" fill="#FF9700" />
+    <path d="M122 8 L122 52 L170 52 L170 28 L146 28 L134 8 Z" fill="#181614" />
+    <circle cx="28" cy="56" r="9" fill="#181614" />
+    <circle cx="50" cy="56" r="9" fill="#181614" />
+    <circle cx="150" cy="56" r="9" fill="#181614" />
+  </svg>,
 ];
 
 export function Fleet() {
@@ -35,12 +43,12 @@ export function Fleet() {
             The right truck for every cargo, every time
           </h2>
           <p className="mt-3.5 text-[15.5px] leading-relaxed text-brand-steel lg:text-[17px]">
-            From 1-tonne pickups to 7-tonne trucks, our fleet is maintained
+            From 1-tonne pickups to 10-tonne trucks, our fleet is maintained
             to NTSA standards and ready for dispatch.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {fleet.map((vehicle, i) => (
             <div
               key={vehicle.name}

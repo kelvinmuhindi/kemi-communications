@@ -34,8 +34,8 @@ export const navLinks: NavItem[] = [
 // ── Homepage — hero stat strip (Siginon/FFK pattern) ──────────────────────
 export const heroStats = [
   { value: "2025", label: "Founded" },
-  { value: "1T–7T", label: "Fleet Capacity Range" },
-  { value: "5+", label: "Towns & Cities Served" },
+  { value: "1T–10T", label: "Fleet Capacity Range" },
+  { value: "6+", label: "Towns & Cities Served" },
   { value: "100%", label: "On-Time Commitment" },
 ];
 
@@ -49,7 +49,7 @@ export const homeFeatures = [
   {
     title: "Right-Sized Fleet",
     description:
-      "From 1-tonne pickups to 7-tonne trucks, matched to your cargo, not the other way round.",
+      "From 1-tonne pickups to 10-tonne trucks, matched to your cargo, not the other way round.",
   },
   {
     title: "Regional Reach",
@@ -121,12 +121,17 @@ export const fleet = [
     description: "High-volume freight for bulk and cross-border loads.",
     capacity: "Up to 7,000 kg",
   },
+  {
+    name: "10-Tonne Truck",
+    description: "Heavy-duty haulage for large bulk and long-distance loads.",
+    capacity: "Up to 10,000 kg",
+  },
 ];
 
-export const coverageRoute = ["Nairobi", "Nakuru", "Kisumu", "Eldoret", "Kisii"];
+export const coverageRoute = ["Nairobi", "Nakuru", "Kisumu", "Eldoret", "Kisii", "Mombasa"];
 
 export const coverageStats = [
-  { value: "5", label: "Towns & cities on our core network" },
+  { value: "6", label: "Towns & cities on our core network" },
   { value: "Cross-border", label: "Regional routes in active development" },
   { value: "Utawala, Nairobi", label: "Head office & dispatch base" },
 ];
@@ -162,7 +167,7 @@ export const aboutContent = {
     {
       title: "Right-Sized Fleet",
       description:
-        "From 1-tonne pickups to 7-tonne trucks, we match the vehicle to the cargo, not the other way round.",
+        "From 1-tonne pickups to 10-tonne trucks, we match the vehicle to the cargo, not the other way round.",
     },
     {
       title: "Regional Reach",
@@ -221,5 +226,6 @@ export const truckOptions = [
   "1-Tonne Pickup",
   "3 to 5-Tonne Truck",
   "7-Tonne Truck",
+  "10-Tonne Truck",
   "Not sure, please advise",
 ];
