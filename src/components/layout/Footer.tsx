@@ -15,13 +15,23 @@ export function Footer() {
     <footer className="bg-[#100F0E] px-6 pb-7 pt-12 text-[#A9A5A0] sm:pt-[60px]">
       <div className="mx-auto grid max-w-[1240px] gap-9 border-b border-[#2A2826] pb-9 sm:grid-cols-2 sm:gap-10 sm:pb-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <Image
-            src="/images/logo.jpeg"
-            alt={`${siteConfig.name} logo`}
-            width={140}
-            height={40}
-            className="mb-4 h-10 w-auto rounded bg-white p-1"
-          />
+          <div className="mb-4 flex items-center gap-3">
+            <Image
+              src="/images/logo.jpeg"
+              alt={`${siteConfig.name} logo`}
+              width={44}
+              height={44}
+              className="h-11 w-auto rounded"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-sm uppercase tracking-wide text-white">
+                {siteConfig.name}
+              </span>
+              <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[1.5px] text-brand-orange">
+                {siteConfig.tagline}
+              </span>
+            </div>
+          </div>
           <p className="max-w-[280px] text-[13px] leading-relaxed">
             Reliable road freight and logistics across Kenya and
             cross-border Africa. On time, every time.

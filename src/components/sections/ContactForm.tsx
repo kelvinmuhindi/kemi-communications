@@ -72,7 +72,7 @@ export function ContactForm() {
           htmlFor="name"
           className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
         >
-          Full Name
+          Full Name <span className="text-brand-orange-deep">*</span>
         </label>
         <input
           id="name"
@@ -89,7 +89,7 @@ export function ContactForm() {
           htmlFor="email"
           className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
         >
-          Email Address
+          Email Address <span className="text-brand-orange-deep">*</span>
         </label>
         <input
           id="email"
@@ -106,7 +106,7 @@ export function ContactForm() {
           htmlFor="message"
           className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
         >
-          Message
+          Message <span className="text-brand-orange-deep">*</span>
         </label>
         <textarea
           id="message"
@@ -118,6 +118,10 @@ export function ContactForm() {
           placeholder="How can we help?"
         />
       </div>
+
+      <p className="text-xs text-brand-steel">
+        <span className="text-brand-orange-deep">*</span> Required fields
+      </p>
 
       {status === "error" && (
         <div className="flex items-start gap-2 rounded-sm border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">

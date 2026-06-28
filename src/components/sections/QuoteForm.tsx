@@ -84,7 +84,7 @@ export function QuoteForm() {
             htmlFor="name"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Full Name
+            Full Name <span className="text-brand-orange-deep">*</span>
           </label>
           <input
             id="name"
@@ -101,7 +101,7 @@ export function QuoteForm() {
             htmlFor="company"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Company (optional)
+            Company
           </label>
           <input
             id="company"
@@ -120,7 +120,7 @@ export function QuoteForm() {
             htmlFor="phone"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Phone Number
+            Phone Number <span className="text-brand-orange-deep">*</span>
           </label>
           <input
             id="phone"
@@ -137,7 +137,7 @@ export function QuoteForm() {
             htmlFor="email"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Email Address
+            Email Address <span className="text-brand-orange-deep">*</span>
           </label>
           <input
             id="email"
@@ -157,7 +157,7 @@ export function QuoteForm() {
             htmlFor="pickup"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Pickup Location
+            Pickup Location <span className="text-brand-orange-deep">*</span>
           </label>
           <input
             id="pickup"
@@ -174,7 +174,7 @@ export function QuoteForm() {
             htmlFor="dropoff"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Drop-off Location
+            Drop-off Location <span className="text-brand-orange-deep">*</span>
           </label>
           <input
             id="dropoff"
@@ -194,7 +194,7 @@ export function QuoteForm() {
             htmlFor="cargoType"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Cargo Type
+            Cargo Type <span className="text-brand-orange-deep">*</span>
           </label>
           <select
             id="cargoType"
@@ -219,7 +219,7 @@ export function QuoteForm() {
             htmlFor="truckType"
             className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-brand-steel"
           >
-            Preferred Truck Size
+            Preferred Truck Size <span className="text-brand-orange-deep">*</span>
           </label>
           <select
             id="truckType"
@@ -273,6 +273,10 @@ export function QuoteForm() {
           placeholder="Approximate weight, special handling needs, etc."
         />
       </div>
+
+      <p className="text-xs text-brand-steel">
+        <span className="text-brand-orange-deep">*</span> Required fields
+      </p>
 
       {status === "error" && (
         <div className="flex items-start gap-2 rounded-sm border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">

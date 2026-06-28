@@ -62,7 +62,8 @@ src/
       ServicesTeaser.tsx        Homepage service one-liners, links out to /services
       Services.tsx              Full service grid, used on /services only
       Fleet.tsx
-      Coverage.tsx
+      Coverage.tsx              Includes the illustrated Kenya map (KenyaMap.tsx)
+      KenyaMap.tsx              Custom SVG map, Nairobi hub with routes to each city
       Testimonial.tsx
       CtaBand.tsx               Reusable CTA band at the bottom of most pages
       ContactForm.tsx           Client component, handles /contact form state and submit
@@ -145,7 +146,7 @@ these CSS variables with system-font fallbacks in place.
 **Still waiting on setup (not content, just configuration):**
 - WhatsApp notifications are coded and ready, but inactive until I finish
   Meta's WhatsApp Business API setup (steps below). Email notifications
-  work as soon as I add a Resend API key.
+  are already working, Resend API key is added in Vercel.
 
 ## Setting up form notifications
 
@@ -155,23 +156,21 @@ that validate the input then try to send an email and a WhatsApp message.
 The two channels are independent: if one isn't set up yet the other still
 works and the form still succeeds for whoever's filling it out either way.
 
-### Email (Resend)
+### Email (Resend), already done
 
-1. Sign up at [resend.com](https://resend.com), free tier is generous and
-   I didn't need a card to start.
-2. Grab an API key from the Resend dashboard.
-3. In Vercel, under Project Settings → Environment Variables, I add:
-   - `RESEND_API_KEY`, the key from step 2
-   - `NOTIFY_EMAIL_TO`, the inbox that should receive form notifications
-     (defaults to the address in `siteConfig.email` if I don't set this)
-   - `NOTIFY_EMAIL_FROM`, the "from" address. Until I verify a sending
-     domain in Resend I use their sandbox address `onboarding@resend.dev`
-     for testing. To send from my own domain (e.g.
-     `notifications@kemicommunication.com`), I need to verify that domain
-     under Domains in the Resend dashboard first, this means adding a few
-     DNS records, similar to the Vercel domain setup I already did.
-4. Redeploy (or just wait for the next deploy) for the new environment
-   variables to kick in.
+I've already signed up at [resend.com](https://resend.com), grabbed an API
+key and added `RESEND_API_KEY` in Vercel under Project Settings →
+Environment Variables. Email notifications are live.
+
+Two related variables I can optionally set in the same place:
+- `NOTIFY_EMAIL_TO`, the inbox that should receive form notifications
+  (defaults to the address in `siteConfig.email` if I don't set this)
+- `NOTIFY_EMAIL_FROM`, the "from" address. Right now this is using
+  Resend's sandbox address `onboarding@resend.dev`. To send from my own
+  domain (e.g. `notifications@kemicommunication.com`), I need to verify
+  that domain under Domains in the Resend dashboard first, this means
+  adding a few DNS records, similar to the Vercel domain setup I already
+  did.
 
 ### WhatsApp (Meta WhatsApp Business Cloud API)
 

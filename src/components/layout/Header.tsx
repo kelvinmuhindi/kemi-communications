@@ -23,10 +23,10 @@ export function Header() {
             priority
           />
           <div className="flex flex-col leading-tight">
-            <span className="font-display text-sm uppercase tracking-wide text-brand-ink">
+            <span className="font-display text-sm uppercase tracking-wide text-brand-ink lg:text-lg">
               {siteConfig.name}
             </span>
-            <span className="mt-0.5 text-[11px] font-bold uppercase tracking-[1.5px] text-brand-orange-deep">
+            <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[1.5px] text-brand-orange-deep lg:text-[11px] lg:tracking-[1px]">
               {siteConfig.tagline}
             </span>
           </div>
