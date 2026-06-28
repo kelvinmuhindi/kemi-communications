@@ -2,18 +2,21 @@
 
 import { useState } from "react";
 
-// Kenya's national border, traced from real lat/lon landmarks (the
-// Kenya/Ethiopia/Somalia tripoint in the NE, the Indian Ocean coastline
-// down to Mombasa, the Tanzania border, and the Lake Victoria area in
-// the west) and normalized to this 100x100 viewBox.
+// Kenya's national border, built from real constituency-level boundary
+// data (union of all constituency polygons, simplified to ~50 points).
+// Normalized to this 100x100 viewBox. North is up.
 const KENYA_PATH =
-  "M 1.3,0 L 13.8,1.6 L 26.3,0 L 37.5,4.3 L 48.7,2.2 L 57.5,7.5 " +
-  "L 67.5,10.8 L 76.3,7 L 86.2,11.8 L 92.5,12.9 L 88.8,22.6 L 88.8,33.3 " +
-  "L 91.3,44.1 L 93.8,54.8 L 95.6,64.5 L 88.8,71 L 83.8,76.3 L 78.8,81.7 " +
-  "L 73.7,86 L 71.3,91.4 L 70,95.7 L 67.5,98.9 L 66.3,99.8 L 60,95.7 " +
-  "L 52.5,89.2 L 46.3,82.8 L 38.8,80.6 L 26.3,71 L 17.5,65.6 L 8.8,60.2 " +
-  "L 1.3,60.2 L 1.3,57 L 0.6,51.6 L 1.3,46.2 L 2.5,39.8 L 3.8,33.3 " +
-  "L 7.5,28 L 5,20.4 L 2.5,14 L 1.3,7.5 L 1.3,0 Z";
+  "M 12.26,65.18 L 5.21,61.75 L 5,51.96 L 10.41,43.16 L 13.12,41.68 " +
+  "L 12.67,40.56 L 14.89,35.89 L 14.06,30.64 L 9.82,24.73 L 9.9,20.43 " +
+  "L 6.57,18.72 L 5.72,15.53 L 16.99,5 L 22.02,5.62 L 22.03,9.19 " +
+  "L 23.93,13.51 L 32.62,14.1 L 42.33,20.97 L 45.95,20.55 L 54.41,22.23 " +
+  "L 54.93,22.82 L 57.69,18.68 L 65.6,15.01 L 69.47,18.06 L 75.73,17.69 " +
+  "L 67.68,27.9 L 67.67,60.24 L 72.7,67.03 L 72.73,69.25 L 66.01,75.87 " +
+  "L 65.54,74.63 L 65.45,74.63 L 65.16,74.67 L 60.47,76.94 L 61,79.34 " +
+  "L 59.93,82.01 L 58.32,82.54 L 57.72,85.05 L 57.26,84.8 L 56.97,84.85 " +
+  "L 57.73,85.62 L 55.7,89.63 L 56.57,90.03 L 53.4,95 L 37.7,84.05 " +
+  "L 38.63,82.19 L 38.18,79.9 L 36.59,78.86 L 29.7,75.03 L 16.07,67.34 " +
+  "L 12.26,65.18 Z";
 
 type CityPoint = {
   name: string;
@@ -25,12 +28,12 @@ type CityPoint = {
 };
 
 const cityPositions: Record<string, CityPoint> = {
-  Nairobi: { name: "Nairobi", x: 36.5, y: 63.3, labelDx: 4.5, labelDy: 1, anchor: "start" },
-  Mombasa: { name: "Mombasa", x: 72.1, y: 92.9, labelDx: -4.5, labelDy: -2, anchor: "end" },
-  Nakuru: { name: "Nakuru", x: 27.2, y: 52.7, labelDx: 4.5, labelDy: -1.5, anchor: "start" },
-  Eldoret: { name: "Eldoret", x: 17.1, y: 43.9, labelDx: 0, labelDy: -4, anchor: "start" },
-  Kisumu: { name: "Kisumu", x: 10.9, y: 50.4, labelDx: -4.5, labelDy: 1, anchor: "end" },
-  Kisii: { name: "Kisii", x: 10.8, y: 56.8, labelDx: -4.5, labelDy: 3, anchor: "end" },
+  Nairobi: { name: "Nairobi", x: 30.7, y: 64.3, labelDx: 4.5, labelDy: 1, anchor: "start" },
+  Mombasa: { name: "Mombasa", x: 55.9, y: 88.7, labelDx: 4.5, labelDy: 1, anchor: "start" },
+  Nakuru: { name: "Nakuru", x: 24.2, y: 55.6, labelDx: 4.5, labelDy: -1.5, anchor: "start" },
+  Eldoret: { name: "Eldoret", x: 17, y: 48.3, labelDx: 0, labelDy: -4, anchor: "start" },
+  Kisumu: { name: "Kisumu", x: 12.6, y: 53.7, labelDx: -4.5, labelDy: 1, anchor: "end" },
+  Kisii: { name: "Kisii", x: 12.6, y: 58.9, labelDx: -4.5, labelDy: 3, anchor: "end" },
 };
 
 export function KenyaMap({ cities }: { cities: string[] }) {
@@ -42,7 +45,7 @@ export function KenyaMap({ cities }: { cities: string[] }) {
   return (
     <div className="mx-auto w-full max-w-[480px]">
       <svg
-        viewBox="-30 -8 138 118"
+        viewBox="-32 -5 130 110"
         className="w-full"
         role="img"
         aria-label="Map of Kenya showing routes from Nairobi to Mombasa, Nakuru, Eldoret, Kisumu and Kisii"
