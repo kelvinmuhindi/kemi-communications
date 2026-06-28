@@ -1,48 +1,47 @@
-# Kemi Communication — Website (Next.js)
+# My Kemi Communication website
 
-This is the multi-page website for Kemi Communication Ltd, a road freight
-and logistics company operating in Kenya with cross-border ambitions
-across Africa. Built with **Next.js 16 (App Router)**, **React 19**,
-**TypeScript**, and **Tailwind CSS v4**.
+This is my Next.js project for the Kemi Communication Ltd website. I'm
+keeping notes here for myself so I remember how everything fits together
+and what's still outstanding. Built with Next.js 16 (App Router), React 19,
+TypeScript and Tailwind CSS v4.
 
-Site structure modeled after Siginon Group's navigation pattern: Home,
-About Us, Services, Media, Resources, Contact Us, and a dedicated Get a
-Quote page.
+I modeled the site structure after Siginon Group's navigation: About Us,
+Services, Media, Resources, Contact Us and a dedicated Get a Quote page.
+No "Home" link in the nav since I removed it on purpose.
 
-## Getting started
+## Running it
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Then open http://localhost:3000.
 
-## Site map
+## My site map
 
-| Route | Page | Notes |
+| Route | Page | What's there |
 |---|---|---|
-| `/` | Home | Full-bleed dark hero with stat strip, "Why Choose Us" feature grid, services teaser (one-liners only), testimonial, CTA. Modeled on the homepage patterns of siginon.com and freightforwarders.co.ke. No duplicated detail — full content lives only on its own page. |
-| `/about` | About Us | Story, mission/vision, values, "why choose us" |
+| `/` | Home | Dark hero with the stat strip, "Why Choose Us" grid, a short services teaser (one-liners, not full detail), testimonial, CTA. I modeled this on siginon.com and freightforwarders.co.ke. No duplicated content, the full detail only lives on its own page. |
+| `/about` | About Us | My story, mission/vision, values, "why choose us" |
 | `/services` | Services | Full service list, fleet, coverage routes |
-| `/media` | Media | News/announcements + blog placeholder |
+| `/media` | Media | News/announcements and a blog placeholder |
 | `/resources` | Resources | Brochure/FAQ/rate guide placeholders |
-| `/contact` | Contact Us | Contact details + general enquiry form |
+| `/contact` | Contact Us | Contact details and a general enquiry form |
 | `/get-a-quote` | Get a Quote | Dedicated freight quote request form |
 
-The top navigation (`src/components/layout/Header.tsx`) is a flat list —
-no "Home" link, no dropdowns. Every item is a real page navigation (an
-actual route change, not an anchor scroll on a single page). Edit the menu
-in `src/lib/content.ts` under `navLinks`.
+The top nav (`src/components/layout/Header.tsx`) is a flat list, no
+dropdowns. Every click is a real page change, not a scroll on one long
+page. I edit the menu itself in `src/lib/content.ts` under `navLinks`.
 
-## Project structure
+## How the project is organized
 
 ```
 src/
   app/
     layout.tsx              Root layout, metadata, html/body shell
     page.tsx                  Homepage
-    globals.css                Tailwind import + brand color tokens (@theme)
+    globals.css                Tailwind import and brand color tokens (@theme)
     about/page.tsx
     services/page.tsx
     media/page.tsx
@@ -57,37 +56,37 @@ src/
       Header.tsx             Sticky nav with mobile menu
       Footer.tsx               Site footer
     sections/
-      PageHero.tsx            Shared dark banner used at the top of every sub-page
+      PageHero.tsx            Shared dark banner at the top of every sub-page
       Hero.tsx                  Homepage-only full-bleed hero with stat strip
-      WhyChooseUs.tsx           Homepage feature grid (Siginon/FFK pattern)
+      WhyChooseUs.tsx           Homepage feature grid
       ServicesTeaser.tsx        Homepage service one-liners, links out to /services
       Services.tsx              Full service grid, used on /services only
       Fleet.tsx
       Coverage.tsx
       Testimonial.tsx
-      CtaBand.tsx               Reusable CTA band, used at the bottom of most pages
-      ContactForm.tsx           Client component, handles /contact form state + submit
-      QuoteForm.tsx             Client component, handles /get-a-quote form state + submit
+      CtaBand.tsx               Reusable CTA band at the bottom of most pages
+      ContactForm.tsx           Client component, handles /contact form state and submit
+      QuoteForm.tsx             Client component, handles /get-a-quote form state and submit
     ui/
       Button.tsx               Shared button variants (primary/ghost/dark/outline-light)
-      Eyebrow.tsx               Small section label with dash
+      Eyebrow.tsx               Small section label with the dash
   lib/
-    content.ts                  ALL site copy, nav structure, services, fleet specs,
-                                 about/media/resources content, contact info, and
-                                 quote-form dropdown options. Edit here first — most
-                                 content changes never need to touch a component file.
+    content.ts                  All my site copy lives here: nav structure, services,
+                                 fleet specs, about/media/resources content, contact
+                                 info, quote-form dropdown options. I edit here first,
+                                 most content changes never need me to touch a
+                                 component file.
     email.ts                    Resend email-sending helper, used by both API routes
     whatsapp.ts                 WhatsApp Business Cloud API helper, used by both API routes
 public/
   images/
-    logo.jpeg                    Client-provided logo
+    logo.jpeg                    My logo
 ```
 
-
-## Brand tokens
+## My brand colors
 
 Defined in `src/app/globals.css` under `@theme inline`, available as
-Tailwind utility classes:
+Tailwind classes:
 
 | Token | Hex | Tailwind class |
 |---|---|---|
@@ -96,17 +95,17 @@ Tailwind utility classes:
 | Ink (near-black) | `#181614` | `bg-brand-ink`, `text-brand-ink` |
 | Ink soft | `#3A3633` | `text-brand-ink-soft` |
 | Steel (muted text) | `#5B6670` | `text-brand-steel` |
-| Paper (white bg) | `#FFFFFF` | `bg-brand-paper` |
-| Paper warm (section bg) | `#FAF7F3` | `bg-brand-paper-warm` |
+| Paper (white background) | `#FFFFFF` | `bg-brand-paper` |
+| Paper warm (section background) | `#FAF7F3` | `bg-brand-paper-warm` |
 | Line (borders) | `#ECE7E0` | `border-brand-line` |
 
-## Fonts — action needed
+## Fonts, still need to fix this
 
-This project was scaffolded in a sandboxed environment without access to
-`fonts.googleapis.com`, so it currently falls back to system fonts
-(`Arial Black` / system sans). The intended typefaces are **Archivo
-Black** (display/headings) and **Inter** (body). To restore them, in
-`src/app/layout.tsx`:
+I built this project in a sandboxed environment that couldn't reach
+`fonts.googleapis.com`, so right now it's falling back to system fonts
+(Arial Black / system sans). The fonts I actually want are Archivo Black
+for headings and Inter for body text. To turn them on, in
+`src/app/layout.tsx` I need to add:
 
 ```tsx
 import { Archivo_Black, Inter } from "next/font/google";
@@ -122,100 +121,95 @@ const inter = Inter({
 });
 ```
 
-And add `${archivoBlack.variable} ${inter.variable}` to the `<html>`
-`className`. No other changes needed — `globals.css` already references
-these CSS variables with system-font fallbacks.
+Then add `${archivoBlack.variable} ${inter.variable}` to the `<html>`
+className. Nothing else needs to change, `globals.css` already points at
+these CSS variables with system-font fallbacks in place.
 
-## What's built vs. pending
+## Where things stand
 
-**Built (this draft):**
+**Done:**
 - 7 pages: Home, About Us, Services, Media, Resources, Contact Us, Get a Quote
-- Dropdown navigation matching the requested site structure
-- Contact form and Get a Quote form (frontend only — see below)
-- Fully responsive (mobile menu, responsive grids)
+- Flat navigation, no dropdowns
+- Contact form and Get a Quote form, wired to real API routes
+- Fully responsive, mobile menu, responsive grids
 - All copy centralized in `lib/content.ts`
 
-**Pending client input (see questionnaire answers):**
-- Real photography (vehicles, team, office) — currently using illustrated
-  SVG placeholders
+**Still waiting on me (content/assets I need to provide):**
+- Real photos: vehicles, team, office. Using illustrated SVG placeholders for now.
 - Blog content, press coverage, full FAQ list, brochure PDF, rate guide
 - M-Pesa payment integration (Daraja API)
 - Forex calculator widget
-- WhatsApp Business API (currently a basic `wa.me` deep link)
+- WhatsApp Business API setup (right now it's just a basic `wa.me` link)
 - Google Analytics 4
 
-**Pending developer work:**
-- WhatsApp notifications are coded and wired up, but inactive until you
-  complete Meta's WhatsApp Business API setup (see below). Email
-  notifications work as soon as you add a Resend API key.
+**Still waiting on setup (not content, just configuration):**
+- WhatsApp notifications are coded and ready, but inactive until I finish
+  Meta's WhatsApp Business API setup (steps below). Email notifications
+  work as soon as I add a Resend API key.
 
-## Form Notifications Setup
+## Setting up form notifications
 
 Both `/contact` and `/get-a-quote` submit to real API routes
 (`src/app/api/contact/route.ts` and `src/app/api/get-a-quote/route.ts`)
-that validate the input, then attempt to send an email and a WhatsApp
-message. Both notification channels are independent: if one isn't
-configured yet, the other still works, and the form still succeeds for
-the visitor either way.
+that validate the input then try to send an email and a WhatsApp message.
+The two channels are independent: if one isn't set up yet the other still
+works and the form still succeeds for whoever's filling it out either way.
 
-### Email notifications (Resend)
+### Email (Resend)
 
-1. Sign up at [resend.com](https://resend.com) (free tier is generous,
-   no credit card required to start).
-2. Get an API key from the Resend dashboard.
-3. In Vercel: **Project Settings → Environment Variables**, add:
-   - `RESEND_API_KEY` — the key from step 2
-   - `NOTIFY_EMAIL_TO` — the inbox that should receive form
-     notifications (defaults to the address in `siteConfig.email` if
-     not set)
-   - `NOTIFY_EMAIL_FROM` — the "from" address. Until you verify a
-     sending domain in Resend, use their sandbox address
-     `onboarding@resend.dev` for testing. To send from your own domain
-     (e.g. `notifications@kemicommunication.com`), verify that domain
-     under **Domains** in the Resend dashboard first, this involves
-     adding a few DNS records, similar to the Vercel domain setup.
+1. Sign up at [resend.com](https://resend.com), free tier is generous and
+   I didn't need a card to start.
+2. Grab an API key from the Resend dashboard.
+3. In Vercel, under Project Settings → Environment Variables, I add:
+   - `RESEND_API_KEY`, the key from step 2
+   - `NOTIFY_EMAIL_TO`, the inbox that should receive form notifications
+     (defaults to the address in `siteConfig.email` if I don't set this)
+   - `NOTIFY_EMAIL_FROM`, the "from" address. Until I verify a sending
+     domain in Resend I use their sandbox address `onboarding@resend.dev`
+     for testing. To send from my own domain (e.g.
+     `notifications@kemicommunication.com`), I need to verify that domain
+     under Domains in the Resend dashboard first, this means adding a few
+     DNS records, similar to the Vercel domain setup I already did.
 4. Redeploy (or just wait for the next deploy) for the new environment
-   variables to take effect.
+   variables to kick in.
 
-### WhatsApp notifications (Meta WhatsApp Business Cloud API)
+### WhatsApp (Meta WhatsApp Business Cloud API)
 
-This requires a Meta developer account and business verification, it's
-free but involves more setup steps than email:
+This one needs a Meta developer account and business verification. It's
+free but has more steps than email:
 
 1. Go to [developers.facebook.com](https://developers.facebook.com) and
-   create a Meta Developer account if you don't have one.
-2. Create a new App → select **Business** as the app type.
-3. Add the **WhatsApp** product to the app.
-4. In the WhatsApp setup, Meta provides a free test phone number you can
-   use immediately, or you can register your own business number.
-5. From the WhatsApp dashboard, copy:
-   - The **temporary access token** (for testing) or generate a
-     **permanent token** under System Users for production use
-   - The **Phone Number ID** (not the phone number itself, an internal
+   create a Meta Developer account if I don't have one yet.
+2. Create a new App, select Business as the app type.
+3. Add the WhatsApp product to the app.
+4. Meta gives a free test phone number I can use right away, or I can
+   register my own business number.
+5. From the WhatsApp dashboard I copy:
+   - The temporary access token for testing, or a permanent token under
+     System Users for production
+   - The Phone Number ID (not the actual phone number, an internal
      numeric ID Meta assigns)
-6. In Vercel: **Project Settings → Environment Variables**, add:
-   - `WHATSAPP_ACCESS_TOKEN` — the token from step 5
-   - `WHATSAPP_PHONE_NUMBER_ID` — the phone number ID from step 5
-   - `WHATSAPP_NOTIFY_TO` — the phone number that should receive
-     notifications, with country code, no `+` or spaces (e.g.
-     `254704881748`)
-7. Important: Meta's test numbers can only message phone numbers that
-   have been added to an approved recipient list in the dashboard while
-   the app is in development mode. For unrestricted sending, the app
-   needs to go through Meta's app review process.
-8. Redeploy for the new environment variables to take effect.
+6. In Vercel, under Project Settings → Environment Variables, I add:
+   - `WHATSAPP_ACCESS_TOKEN`, the token from step 5
+   - `WHATSAPP_PHONE_NUMBER_ID`, the phone number ID from step 5
+   - `WHATSAPP_NOTIFY_TO`, the phone number that should receive
+     notifications, country code, no `+` or spaces (e.g. `254704881748`)
+7. Important: Meta's test numbers can only message numbers I've added to
+   an approved recipient list while the app is still in development mode.
+   For unrestricted sending the app needs to go through Meta's app review.
+8. Redeploy for the new environment variables to kick in.
 
-Until these WhatsApp variables are set, the API routes log a warning and
-skip sending, they never fail the form submission because of it.
+Until I set the WhatsApp variables, the API routes just log a warning and
+skip sending, they never break the form submission because of it.
 
-### Testing locally
+### Testing this locally
 
-Create a `.env.local` file in the project root (this file is
-git-ignored, never commit it) with the same variables listed above, then
-run `npm run dev`. Submitting either form will attempt real sends using
-whatever keys are present.
+I create a `.env.local` file in the project root (it's git-ignored, never
+commit it) with the same variables listed above, then run `npm run dev`.
+Submitting either form will attempt real sends using whatever keys are
+present.
 
-## Useful commands
+## Commands I actually use
 
 ```bash
 npm run dev      # start dev server
@@ -227,23 +221,21 @@ npx tsc --noEmit # type-check only
 
 ## Analytics
 
-[Vercel Speed Insights](https://vercel.com/docs/speed-insights) and
-[Vercel Analytics](https://vercel.com/docs/analytics) are both wired up in
+Vercel Speed Insights and Vercel Analytics are both wired up in
 `src/app/layout.tsx` (`@vercel/speed-insights/next` and
-`@vercel/analytics/next`). Both activate automatically on Vercel
-deployments — no extra setup needed. Locally or on other hosts they
-simply do nothing. Speed Insights tracks page performance; Analytics
-tracks visitor/pageview data, viewable under the Analytics tab in your
+`@vercel/analytics/next`). Both turn on automatically once deployed on
+Vercel, nothing else for me to do. Locally or on other hosts they just do
+nothing. Speed Insights tracks page performance, Analytics tracks
+visitor/pageview data, I can see both under their respective tabs in my
 Vercel project dashboard.
 
-Google Analytics 4 is not yet added — see "Pending client input" above.
+Google Analytics 4 isn't added yet, it's in my "still waiting on me" list above.
 
-## Favicon & app icons
+## Favicon and app icons
 
-`src/app/favicon.ico`, `src/app/icon.png`, and `src/app/apple-icon.png`
-are cropped from the client's logo (just the truck graphic, since the
-full logo with wordmark is illegible at favicon sizes). Next.js App
-Router auto-detects these filenames — no manual `<link>` tags or metadata
-config needed. To change them, just replace the files with new images of
-the same name (any reasonable square image works; Next.js handles
-resizing for different contexts).
+`src/app/favicon.ico`, `src/app/icon.png` and `src/app/apple-icon.png` are
+cropped from my logo (just the truck graphic, since the full logo with the
+wordmark turns illegible at favicon sizes). Next.js auto-detects these
+filenames, I don't need any manual `<link>` tags or metadata config. To
+change them I just replace the files with new images of the same name,
+any reasonable square image works and Next.js handles resizing.

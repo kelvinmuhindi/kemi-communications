@@ -17,7 +17,7 @@ export function Coverage() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-0">
+        <div className="flex flex-wrap items-center gap-y-2">
           {coverageRoute.map((city, i) => (
             <div key={city} className="flex items-center">
               <span className="font-display text-base uppercase tracking-wide py-2.5 lg:text-lg">
@@ -26,7 +26,7 @@ export function Coverage() {
               {i < coverageRoute.length - 1 && (
                 <ArrowRight
                   size={18}
-                  className="mx-4.5 text-brand-orange sm:rotate-0"
+                  className="mx-3 text-brand-orange sm:mx-4.5"
                   aria-hidden="true"
                 />
               )}
