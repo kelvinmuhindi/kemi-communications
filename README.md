@@ -63,7 +63,10 @@ src/
       Services.tsx              Full service grid, used on /services only
       Fleet.tsx
       Coverage.tsx              Just the stats and the Kenya map now, no duplicate text list
-      KenyaMap.tsx              Custom SVG map traced from real lat/lon, Nairobi hub with routes to each city
+      KenyaMap.tsx              Custom SVG map, 57-point border traced from real lat/lon
+                                 boundary coordinates (not copied from any single source,
+                                 country borders are geographic fact, not copyrightable),
+                                 white border stroke, Nairobi hub with routes to each city
       Testimonial.tsx
       CtaBand.tsx               Reusable CTA band at the bottom of most pages
       ContactForm.tsx           Client component, handles /contact form state and submit
