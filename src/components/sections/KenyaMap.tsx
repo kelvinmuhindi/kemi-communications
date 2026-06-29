@@ -28,12 +28,19 @@ type CityPoint = {
 };
 
 const cityPositions: Record<string, CityPoint> = {
-  Nairobi: { name: "Nairobi", x: 30.7, y: 64.3, labelDx: 4.5, labelDy: 1, anchor: "start" },
+  // Dense central cluster — each label points in a distinct compass
+  // direction away from the cluster center so none overlap.
+  Eldoret: { name: "Eldoret", x: 17, y: 48.3, labelDx: -1, labelDy: -4.5, anchor: "end" },
+  Kisumu: { name: "Kisumu", x: 12.6, y: 53.7, labelDx: -4.5, labelDy: -1, anchor: "end" },
+  Kisii: { name: "Kisii", x: 12.6, y: 58.9, labelDx: -4.5, labelDy: 2.5, anchor: "end" },
+  Nakuru: { name: "Nakuru", x: 24.2, y: 55.6, labelDx: 5, labelDy: 0.5, anchor: "start" },
+  Nanyuki: { name: "Nanyuki", x: 33, y: 52.7, labelDx: 4.5, labelDy: -3, anchor: "start" },
+  Narok: { name: "Narok", x: 22.3, y: 62.5, labelDx: -1, labelDy: 5, anchor: "end" },
+  Nairobi: { name: "Nairobi", x: 30.7, y: 64.3, labelDx: 5, labelDy: 4.5, anchor: "start" },
+  // Coastal / outlying cities — plenty of open space, simple offsets
   Mombasa: { name: "Mombasa", x: 55.9, y: 88.7, labelDx: 4.5, labelDy: 1, anchor: "start" },
-  Nakuru: { name: "Nakuru", x: 24.2, y: 55.6, labelDx: 4.5, labelDy: -1.5, anchor: "start" },
-  Eldoret: { name: "Eldoret", x: 17, y: 48.3, labelDx: 0, labelDy: -4, anchor: "start" },
-  Kisumu: { name: "Kisumu", x: 12.6, y: 53.7, labelDx: -4.5, labelDy: 1, anchor: "end" },
-  Kisii: { name: "Kisii", x: 12.6, y: 58.9, labelDx: -4.5, labelDy: 3, anchor: "end" },
+  Lamu: { name: "Lamu", x: 66.9, y: 73, labelDx: 4.5, labelDy: 1, anchor: "start" },
+  Voi: { name: "Voi", x: 46.1, y: 82.9, labelDx: -4.5, labelDy: 1, anchor: "end" },
 };
 
 export function KenyaMap({ cities }: { cities: string[] }) {
@@ -45,10 +52,10 @@ export function KenyaMap({ cities }: { cities: string[] }) {
   return (
     <div className="mx-auto w-full max-w-[480px]">
       <svg
-        viewBox="-32 -5 130 110"
+        viewBox="-20 0 121 100"
         className="w-full"
         role="img"
-        aria-label="Map of Kenya showing routes from Nairobi to Mombasa, Nakuru, Eldoret, Kisumu and Kisii"
+        aria-label="Map of Kenya showing routes from Nairobi to Mombasa, Nakuru, Eldoret, Kisumu, Kisii, Nanyuki, Narok, Lamu and Voi"
       >
         <defs>
           <marker

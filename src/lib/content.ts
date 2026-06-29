@@ -128,10 +128,21 @@ export const fleet = [
   },
 ];
 
-export const coverageRoute = ["Nairobi", "Mombasa", "Nakuru", "Eldoret", "Kisumu", "Kisii"];
+export const coverageRoute = [
+  "Nairobi",
+  "Mombasa",
+  "Nakuru",
+  "Eldoret",
+  "Kisumu",
+  "Kisii",
+  "Nanyuki",
+  "Narok",
+  "Lamu",
+  "Voi",
+];
 
 export const coverageStats = [
-  { value: "6", label: "Towns & cities on our core network" },
+  { value: "10", label: "Towns & cities on our core network" },
   { value: "Cross-border", label: "Regional routes in active development" },
   { value: "Utawala, Nairobi", label: "Head office & dispatch base" },
 ];
