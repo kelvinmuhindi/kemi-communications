@@ -28,10 +28,12 @@ export async function sendEmailNotification({
   subject,
   html,
   replyTo,
+  attachments,
 }: {
   subject: string;
   html: string;
   replyTo?: string;
+  attachments?: { filename: string; content: Buffer }[];
 }): Promise<EmailSendResult> {
   const apiKey = process.env.RESEND_API_KEY;
 
@@ -53,6 +55,7 @@ export async function sendEmailNotification({
       subject,
       html,
       ...(replyTo ? { replyTo } : {}),
+      ...(attachments && attachments.length > 0 ? { attachments } : {}),
     });
 
     if (error) {

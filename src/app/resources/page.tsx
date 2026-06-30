@@ -3,6 +3,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FaqAccordion } from "@/components/sections/FaqAccordion";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { resourceItems } from "@/lib/content";
 
 export const metadata = {
@@ -47,6 +49,23 @@ export default function ResourcesPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="bg-brand-paper-warm px-6 py-[90px]">
+          <div className="mx-auto max-w-[1240px]">
+            <div className="mb-12 max-w-[620px] text-center mx-auto">
+              <Eyebrow>FAQs</Eyebrow>
+              <h2 className="font-display text-[28px] leading-tight text-brand-ink sm:text-4xl lg:text-[42px]">
+                Frequently Asked Questions
+              </h2>
+              <p className="mt-3.5 text-[15.5px] leading-relaxed text-brand-steel lg:text-[17px]">
+                Common questions about our services, pricing and cargo
+                handling. Can&apos;t find what you&apos;re looking for?
+                Get in touch and we&apos;ll help directly.
+              </p>
+            </div>
+            <FaqAccordion />
           </div>
         </section>
 

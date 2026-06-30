@@ -26,9 +26,10 @@ Then open http://localhost:3000.
 | `/about` | About Us | My story, mission/vision, values, "why choose us" |
 | `/services` | Services | Full service list, fleet, coverage routes |
 | `/media` | Media | News/announcements and a blog placeholder |
-| `/resources` | Resources | Brochure/FAQ/rate guide placeholders |
+| `/resources` | Resources | Brochure/rate guide placeholders, real FAQ accordion (12 questions) |
 | `/contact` | Contact Us | Contact details and a general enquiry form |
 | `/get-a-quote` | Get a Quote | Dedicated freight quote request form |
+| `/careers` | Careers | "Work With Us" page, job application form with CV upload |
 
 The top nav (`src/components/layout/Header.tsx`) is a flat list, no
 dropdowns. Every click is a real page change, not a scroll on one long
@@ -48,9 +49,13 @@ src/
     resources/page.tsx
     contact/page.tsx
     get-a-quote/page.tsx
+    careers/page.tsx
     api/
       contact/route.ts          POST endpoint for the contact form
       get-a-quote/route.ts      POST endpoint for the quote request form
+      careers/route.ts          POST endpoint for the job application form, accepts
+                                 multipart/form-data (not JSON) since it handles a
+                                 file upload, see "CV upload notes" below
   components/
     layout/
       Header.tsx             Sticky nav with mobile menu
@@ -72,6 +77,10 @@ src/
       CtaBand.tsx               Reusable CTA band at the bottom of most pages
       ContactForm.tsx           Client component, handles /contact form state and submit
       QuoteForm.tsx             Client component, handles /get-a-quote form state and submit
+      CareerApplicationForm.tsx  Client component, handles /careers form state, submit,
+                                 and CV file upload (drag-free, click-to-upload)
+      FaqAccordion.tsx          Client component, real FAQ content (12 questions),
+                                 click to expand/collapse, used on /resources
     ui/
       Button.tsx               Shared button variants (primary/ghost/dark/outline-light)
       Eyebrow.tsx               Small section label with the dash
@@ -142,7 +151,7 @@ these CSS variables with system-font fallbacks in place.
 
 **Still waiting on me (content/assets I need to provide):**
 - Real photos: vehicles, team, office. Using illustrated SVG placeholders for now.
-- Blog content, press coverage, full FAQ list, brochure PDF, rate guide
+- Blog content, press coverage, brochure PDF, rate guide
 - M-Pesa payment integration (Daraja API)
 - Forex calculator widget
 - WhatsApp Business API setup (right now it's just a basic `wa.me` link)
@@ -205,6 +214,24 @@ free but has more steps than email:
 
 Until I set the WhatsApp variables, the API routes just log a warning and
 skip sending, they never break the form submission because of it.
+
+### CV upload notes (Careers page)
+
+The `/careers` form is different from the other two: it sends `multipart/form-data`
+(not JSON) because of the file upload, and the CV gets attached directly to the
+notification email via Resend's attachments parameter.
+
+A few constraints worth knowing:
+- **3MB file size cap**, enforced both client-side (instant feedback before
+  submit) and server-side. I set it there on purpose: Vercel serverless
+  functions have a hard 4.5MB request body limit, and base64 encoding adds
+  about 33% overhead, so a 3MB raw file becomes roughly 4MB once encoded,
+  comfortably under that ceiling. Raising this limit risks the request
+  failing with a 413 error before my own validation even runs.
+- **Accepted formats:** PDF, DOC, DOCX only.
+- If `RESEND_API_KEY` isn't set, the CV still gets validated and the form
+  still succeeds for the applicant, the email (and the attachment) just
+  doesn't send, same fallback behavior as the other two forms.
 
 ### Testing this locally
 

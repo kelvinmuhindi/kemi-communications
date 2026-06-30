@@ -27,6 +27,7 @@ export const navLinks: NavItem[] = [
   { label: "Services", href: "/services" },
   { label: "Media", href: "/media" },
   { label: "Resources", href: "/resources" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -35,7 +36,7 @@ export const navLinks: NavItem[] = [
 export const heroStats = [
   { value: "2025", label: "Founded" },
   { value: "1T–10T", label: "Fleet Capacity Range" },
-  { value: "6+", label: "Towns & Cities Served" },
+  { value: "10+", label: "Towns & Cities Served" },
   { value: "100%", label: "On-Time Commitment" },
 ];
 
@@ -212,11 +213,6 @@ export const resourceItems = [
     status: "coming-soon",
   },
   {
-    title: "Frequently Asked Questions",
-    description: "Common questions about booking, pricing and cargo handling.",
-    status: "coming-soon",
-  },
-  {
     title: "Rate Guide",
     description: "Indicative pricing for our core routes and vehicle types.",
     status: "coming-soon",
@@ -240,3 +236,87 @@ export const truckOptions = [
   "10-Tonne Truck",
   "Not sure, please advise",
 ];
+
+export const faqItems = [
+  {
+    question: "What services does Kemi Communication Limited provide?",
+    answer:
+      "We provide transport and logistics solutions including cargo transportation, fleet management, distribution, supply chain support, last-mile delivery and customized logistics solutions for businesses and individuals.",
+  },
+  {
+    question: "Which areas do you serve?",
+    answer:
+      "We operate across Kenya and East Africa, offering reliable transportation solutions for local, regional and cross-border deliveries.",
+  },
+  {
+    question: "What types of cargo do you transport?",
+    answer:
+      "We transport general cargo, FMCG products, construction materials, agricultural produce, industrial goods and specialized shipments subject to applicable regulations.",
+  },
+  {
+    question: "How do I request a quotation?",
+    answer:
+      "You can request a quotation through our website, email or phone. Our team will assess your requirements and provide a customized proposal.",
+  },
+  {
+    question: "How are transport charges calculated?",
+    answer:
+      "Pricing is based on factors such as cargo type, weight, dimensions, destination, urgency and any special handling requirements.",
+  },
+  {
+    question: "Do you offer same-day delivery?",
+    answer:
+      "Same-day delivery is available for selected locations and subject to vehicle availability and delivery schedules.",
+  },
+  {
+    question: "Is my cargo insured during transit?",
+    answer:
+      "We maintain strict safety standards and can arrange cargo insurance upon request for additional protection.",
+  },
+  {
+    question: "Can I track my shipment?",
+    answer:
+      "Yes. Customers receive regular shipment updates and can contact our operations team for real-time delivery status.",
+  },
+  {
+    question: "Do you provide warehousing services?",
+    answer: "Not at the moment.",
+  },
+  {
+    question: "What industries do you serve?",
+    answer:
+      "We support retail, manufacturing, agriculture, construction, healthcare, e-commerce, NGOs and government institutions.",
+  },
+  {
+    question: "How do you ensure cargo safety?",
+    answer:
+      "Our vehicles are regularly maintained, drivers are professionally trained, and shipments are handled according to strict operational procedures.",
+  },
+  {
+    question: "How can I contact customer support?",
+    answer:
+      "You can reach us through phone, email or the contact form on our website. Our team is ready to assist with any inquiries.",
+  },
+];
+
+export const careersContent = {
+  intro:
+    "We're always looking for reliable, hardworking people to join the Kemi Communication team, from drivers and dispatch staff to logistics coordinators and customer support.",
+  whyJoinUs: [
+    {
+      title: "Growing Company",
+      description:
+        "Be part of a road freight business expanding its routes and fleet across Kenya and beyond.",
+    },
+    {
+      title: "Hands-On Team",
+      description:
+        "Work alongside a small, direct team where your contribution is seen and valued.",
+    },
+    {
+      title: "Real Responsibility",
+      description:
+        "From day one, you'll be trusted with real routes, real cargo and real customers.",
+    },
+  ],
+};
