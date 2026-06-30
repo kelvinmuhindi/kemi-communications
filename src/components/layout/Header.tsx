@@ -23,22 +23,22 @@ export function Header() {
             priority
           />
           <div className="flex flex-col leading-tight">
-            <span className="font-display text-sm font-bold uppercase tracking-wide text-brand-ink lg:text-lg">
+            <span className="whitespace-nowrap font-display text-sm font-bold uppercase tracking-wide text-brand-ink lg:text-base">
               {siteConfig.name}
             </span>
-            <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[1.5px] text-brand-orange-deep lg:text-[11px] lg:tracking-[1px]">
+            <span className="mt-0.5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[1.5px] text-brand-orange-deep lg:text-[11px] lg:tracking-[1px]">
               {siteConfig.tagline}
             </span>
           </div>
         </Link>
 
         <nav className="hidden lg:block">
-          <ul className="flex gap-7">
+          <ul className="flex gap-5 xl:gap-6">
             {navLinks.map((link) => (
               <li key={link.href} className="relative">
                 <Link
                   href={link.href}
-                  className="group/link relative py-1.5 text-sm font-semibold uppercase tracking-wide text-brand-ink-soft transition-colors hover:text-brand-orange-deep lg:text-base"
+                  className="group/link relative whitespace-nowrap py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand-ink-soft transition-colors hover:text-brand-orange-deep xl:text-sm"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-brand-orange transition-all duration-200 group-hover/link:w-full" />
@@ -48,16 +48,16 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-3.5 lg:flex">
+        <div className="hidden items-center gap-2.5 lg:flex xl:gap-3.5">
           <a
             href={`https://wa.me/${siteConfig.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-sm bg-brand-ink px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-orange-deep"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-sm bg-brand-ink px-4 py-2.5 text-[13px] font-bold text-white transition-colors hover:bg-brand-orange-deep xl:px-5"
           >
             WhatsApp Us
           </a>
-          <Button href="/get-a-quote" variant="primary">
+          <Button href="/get-a-quote" variant="primary" className="whitespace-nowrap !px-4 !text-[13px] xl:!px-6">
             Get a Quote
           </Button>
         </div>
