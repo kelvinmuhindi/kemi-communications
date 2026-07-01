@@ -94,7 +94,7 @@ export function PartnerForm() {
             required
             value={form.name}
             onChange={handleChange}
-            placeholder="Jane Mwangi"
+            placeholder="Jane Doe"
             className={inputClass}
           />
         </div>
@@ -193,7 +193,7 @@ export function PartnerForm() {
           rows={4}
           value={form.message}
           onChange={handleChange}
-          placeholder="Anything else we should know — availability, experience, special cargo capabilities…"
+          placeholder="Anything else we should know. Availability, experience, special cargo capabilities..."
           className={`${inputClass} resize-none`}
         />
       </div>

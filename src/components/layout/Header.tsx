@@ -52,7 +52,7 @@ export function Header() {
           <Button href="/become-a-partner" variant="dark" className="whitespace-nowrap !px-4 !text-[13px] xl:!px-5">
             Become a Partner
           </Button>
-          <Button href="/get-a-quote" variant="primary" className="whitespace-nowrap !px-4 !text-[13px] xl:!px-6">
+          <Button href="/get-a-quote" variant="primary" className="whitespace-nowrap !px-4 !text-[13px] xl:!px-6 hover:!bg-brand-ink hover:!shadow-none">
             Get a Quote
           </Button>
         </div>
@@ -85,7 +85,7 @@ export function Header() {
             <Button href="/become-a-partner" variant="dark" className="justify-center">
               Become a Partner
             </Button>
-            <Button href="/get-a-quote" variant="primary" className="justify-center">
+            <Button href="/get-a-quote" variant="primary" className="justify-center hover:!bg-brand-ink hover:!shadow-none">
               Get a Quote
             </Button>
           </div>

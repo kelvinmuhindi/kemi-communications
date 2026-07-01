@@ -17,13 +17,13 @@ const benefits = [
     icon: Banknote,
     title: "Consistent Income",
     description:
-      "Get paid per trip on routes we assign. No chasing clients — we bring the freight to you.",
+      "Get paid per trip on routes we assign. No chasing clients. We bring the freight to you.",
   },
   {
     icon: Truck,
     title: "Keep Your Vehicle Working",
     description:
-      "Idle trucks cost money. We keep your fleet moving with regular assignments across Kenya and cross-border routes.",
+      "Idle trucks cost money. We keep your fleet moving with regular assignments across Kenya and cross border routes.",
   },
   {
     icon: ShieldCheck,
@@ -35,7 +35,7 @@ const benefits = [
     icon: PhoneCall,
     title: "Direct Communication",
     description:
-      "Our dispatch team coordinates with you directly — clear trip briefs, loading times and delivery contacts before every run.",
+      "Our dispatch team coordinates with you directly. Clear trip briefs, loading times and delivery contacts before every run.",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function BecomeAPartnerPage() {
               </h2>
               <p className="mt-4 text-[15.5px] leading-relaxed text-brand-steel lg:text-[17px]">
                 We handle the clients, the paperwork and the route planning.
-                You provide the vehicle and the drive. Together we deliver.
+                You provide the vehicle. Together we deliver.
               </p>
             </div>
 
@@ -148,7 +148,7 @@ export default function BecomeAPartnerPage() {
                 </h2>
                 <p className="mb-8 text-[15.5px] leading-relaxed text-brand-steel lg:text-[17px]">
                   Fill in the form and our team will be in touch within 2
-                  business days. We welcome owner-operators and fleet owners
+                  business days. We welcome owner operators and fleet owners
                   with trucks of any size.
                 </p>
 
@@ -159,7 +159,7 @@ export default function BecomeAPartnerPage() {
                   <ul className="list-inside list-disc space-y-1.5">
                     <li>Vehicle make, model and plate number(s)</li>
                     <li>Current logbook (we may request a copy later)</li>
-                    <li>Valid driving licence (for owner-operators)</li>
+                    <li>Valid driving licence (for owner operators)</li>
                     <li>Routes or regions you are available to cover</li>
                   </ul>
                 </div>
