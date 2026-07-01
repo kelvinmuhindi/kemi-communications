@@ -5,6 +5,7 @@ export const siteConfig = {
   name: "Kemi Communication",
   legalName: "Kemi Communication Ltd",
   tagline: "On Time",
+  url: "https://www.kemicommunication.com",
   regNumber: "PVT-OD1KDL5V",
   phone: "+254 704 881 748",
   whatsapp: "+254704881748",

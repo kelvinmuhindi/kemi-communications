@@ -44,7 +44,7 @@ export function Footer() {
           <h4 className="mb-4 text-[13px] uppercase tracking-wide text-white">
             Company
           </h4>
-          <ul className="space-y-3 sm:space-y-2.5">
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-3 sm:block sm:space-y-2.5">
             {footerLinks.map((link) => (
               <li key={link.href} className="text-[13.5px]">
                 <a

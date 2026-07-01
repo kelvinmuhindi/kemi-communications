@@ -7,11 +7,14 @@ import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { resourceItems } from "@/lib/content";
 
-export const metadata = {
-  title: "Resources | Kemi Communication Ltd",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Resources",
   description:
-    "Company brochures and FAQs from Kemi Communication Ltd.",
-};
+    "Company brochures and FAQs from Kemi Communication Ltd to help you plan your freight shipment across Kenya.",
+  path: "/resources",
+});
 
 export default function ResourcesPage() {
   return (

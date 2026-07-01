@@ -6,11 +6,14 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { mediaItems } from "@/lib/content";
 
-export const metadata = {
-  title: "Media | Kemi Communication Ltd",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Media & News",
   description:
-    "News, announcements and updates from Kemi Communication Ltd.",
-};
+    "News, announcements and updates from Kemi Communication Ltd, Kenya's road freight and logistics company.",
+  path: "/media",
+});
 
 export default function MediaPage() {
   return (

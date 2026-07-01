@@ -6,11 +6,14 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PartnerForm } from "@/components/sections/PartnerForm";
 
-export const metadata = {
-  title: "Become a Partner | Kemi Communication Ltd",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Become a Partner",
   description:
-    "Partner with Kemi Communication Ltd by providing your vehicle for our logistics operations. Register your truck and earn consistent income on every completed delivery.",
-};
+    "Partner with Kemi Communication Ltd by registering your vehicle for our logistics operations. Earn consistent income on every completed delivery.",
+  path: "/become-a-partner",
+});
 
 const benefits = [
   {
